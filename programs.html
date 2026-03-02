@@ -1,0 +1,1204 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>IGEF Engineering Admissions</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700;800&amp;family=Noto+Sans:wght@400;500;600;700&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        primary: "#8B1A1A", // Crimson
+                        "primary-light": "#B22222",
+                        secondary: "#C9A84C", // Gold
+                        "background-light": "#FAF8F4", // Cream
+                        "background-dark": "#1A1208", // Ink (using as dark bg base)
+                        "surface-light": "#FFFFFF",
+                        "surface-dark": "#2D2416", // Body text color used as dark surface
+                        "text-main": "#1A1208", // Ink
+                        "text-body": "#2D2416", // Body
+                        "text-muted": "#6B5C45", // Muted
+                        "border-color": "#E8DFD0", // Border
+                    },
+                    fontFamily: {
+                        display: ["Lexend", "sans-serif"],
+                        body: ["Noto Sans", "sans-serif"],
+                    },
+                    borderRadius: {
+                        DEFAULT: "0.5rem",
+                        lg: "0.75rem",
+                        xl: "1rem",
+                        "2xl": "1.5rem",
+                    },
+                },
+            },
+        }
+    </script>
+    <style>
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(201, 168, 76, 0.3);
+        }
+
+        .dark .glass-panel {
+            background: rgba(45, 36, 22, 0.9);
+            border: 1px solid rgba(201, 168, 76, 0.1);
+        }
+
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+
+        .text-gradient-crimson-gold {
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent;
+            background-image: linear-gradient(to right, #8B1A1A, #C9A84C);
+        }
+    </style>
+</head>
+
+<body
+    class="bg-background-light dark:bg-background-dark text-text-body dark:text-slate-100 font-body antialiased selection:bg-secondary selection:text-white">
+    <nav class="sticky top-0 z-50 w-full glass-panel border-b border-border-color dark:border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <div class="flex-shrink-0 flex items-center gap-2">
+                    <div class="size-10 rounded-lg bg-primary flex items-center justify-center text-white">
+                        <span class="material-symbols-outlined text-2xl">school</span>
+                    </div>
+                    <span class="font-display font-bold text-xl tracking-tight text-primary dark:text-white">IGEF</span>
+                </div>
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-8">
+                        <a class="text-sm font-medium text-text-main hover:text-secondary transition-colors"
+                            href="#programs">Programs</a>
+                        <a class="text-sm font-medium text-text-main hover:text-secondary transition-colors"
+                            href="#placements">Placements</a>
+                        <a class="text-sm font-medium text-text-main hover:text-secondary transition-colors"
+                            href="#campus">Campus</a>
+                        <a class="text-sm font-medium text-text-main hover:text-secondary transition-colors"
+                            href="#scholarships">Scholarships</a>
+                        <a class="text-sm font-medium text-text-main hover:text-secondary transition-colors"
+                            href="#admissions">Admissions</a>
+                    </div>
+                </div>
+                <div class="hidden md:block">
+                    <a class="bg-primary hover:bg-secondary text-white px-6 py-2.5 rounded-full text-sm font-bold transition-all shadow-lg hover:shadow-secondary/30 transform hover:-translate-y-0.5"
+                        href="#apply">
+                        Apply Now
+                    </a>
+                </div>
+                <div class="-mr-2 flex md:hidden">
+                    <button
+                        class="inline-flex items-center justify-center p-2 rounded-md text-text-muted hover:text-primary focus:outline-none"
+                        type="button">
+                        <span class="material-symbols-outlined">menu</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <section class="relative pt-12 pb-20 lg:pt-20 lg:pb-28 overflow-hidden bg-background-light dark:bg-background-dark">
+        <div class="absolute inset-0 -z-10 opacity-10 dark:opacity-5">
+            <div
+                class="absolute right-0 top-0 h-[600px] w-[600px] bg-secondary rounded-full blur-[100px] translate-x-1/3 -translate-y-1/3">
+            </div>
+            <div
+                class="absolute left-0 bottom-0 h-[400px] w-[400px] bg-primary rounded-full blur-[100px] -translate-x-1/3 translate-y-1/3">
+            </div>
+        </div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="lg:grid lg:grid-cols-12 lg:gap-12 items-center">
+                <div class="lg:col-span-7 text-center lg:text-left mb-12 lg:mb-0">
+                    <div
+                        class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-secondary/10 text-secondary text-xs font-bold uppercase tracking-wider mb-6 border border-secondary/20">
+                        <span class="size-2 rounded-full bg-secondary"></span>
+                        Admissions Open 2024-25
+                    </div>
+                    <h1
+                        class="text-4xl lg:text-6xl font-display font-bold leading-tight mb-6 text-text-main dark:text-white">
+                        Launch Your <span class="text-gradient-crimson-gold">Engineering Career</span>
+                    </h1>
+                    <p class="text-lg text-text-muted dark:text-slate-300 mb-8 max-w-2xl mx-auto lg:mx-0">
+                        Join the league of innovators at Indo Global Group of Colleges. Experience a 30+ Acre lush green
+                        campus and connect with our 10,000+ Alumni network.
+                    </p>
+                    <div class="flex flex-wrap justify-center lg:justify-start gap-4 mb-10">
+                        <div
+                            class="flex items-center gap-2 px-4 py-2 bg-white dark:bg-surface-dark rounded-lg shadow-sm border border-border-color dark:border-slate-700">
+                            <span class="material-symbols-outlined text-secondary">verified</span>
+                            <span class="font-semibold text-sm text-text-body dark:text-slate-200">AICTE Approved</span>
+                        </div>
+                        <div
+                            class="flex items-center gap-2 px-4 py-2 bg-white dark:bg-surface-dark rounded-lg shadow-sm border border-border-color dark:border-slate-700">
+                            <span class="material-symbols-outlined text-secondary">school</span>
+                            <span class="font-semibold text-sm text-text-body dark:text-slate-200">Affiliated to
+                                IKGPTU</span>
+                        </div>
+                        <div
+                            class="flex items-center gap-2 px-4 py-2 bg-white dark:bg-surface-dark rounded-lg shadow-sm border border-border-color dark:border-slate-700">
+                            <span class="material-symbols-outlined text-secondary">landscape</span>
+                            <span class="font-semibold text-sm text-text-body dark:text-slate-200">30+ Acre
+                                Campus</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="lg:col-span-5 relative" id="apply">
+                    <div
+                        class="bg-white dark:bg-surface-dark rounded-2xl shadow-xl shadow-secondary/10 p-6 lg:p-8 border border-border-color dark:border-slate-700 relative z-10">
+                        <div class="text-center mb-6">
+                            <h3 class="text-2xl font-display font-bold text-primary dark:text-white">Start Application
+                            </h3>
+                            <p class="text-sm text-text-muted">Takes less than 2 minutes</p>
+                        </div>
+                        <form class="space-y-4">
+                            <div>
+                                <label class="block text-sm font-medium text-text-body dark:text-slate-300 mb-1"
+                                    for="name">Full Name</label>
+                                <input
+                                    class="w-full rounded-lg border-border-color dark:border-slate-600 bg-background-light dark:bg-slate-800 text-text-main dark:text-white focus:ring-primary focus:border-primary"
+                                    id="name" placeholder="John Doe" type="text" />
+                            </div>
+                            <div class="grid grid-cols-2 gap-4">
+                                <div>
+                                    <label class="block text-sm font-medium text-text-body dark:text-slate-300 mb-1"
+                                        for="mobile">Mobile</label>
+                                    <input
+                                        class="w-full rounded-lg border-border-color dark:border-slate-600 bg-background-light dark:bg-slate-800 text-text-main dark:text-white focus:ring-primary focus:border-primary"
+                                        id="mobile" placeholder="+91" type="tel" />
+                                </div>
+                                <div>
+                                    <label class="block text-sm font-medium text-text-body dark:text-slate-300 mb-1"
+                                        for="city">City</label>
+                                    <input
+                                        class="w-full rounded-lg border-border-color dark:border-slate-600 bg-background-light dark:bg-slate-800 text-text-main dark:text-white focus:ring-primary focus:border-primary"
+                                        id="city" placeholder="City" type="text" />
+                                </div>
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium text-text-body dark:text-slate-300 mb-1"
+                                    for="email">Email Address</label>
+                                <input
+                                    class="w-full rounded-lg border-border-color dark:border-slate-600 bg-background-light dark:bg-slate-800 text-text-main dark:text-white focus:ring-primary focus:border-primary"
+                                    id="email" placeholder="john@example.com" type="email" />
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium text-text-body dark:text-slate-300 mb-1"
+                                    for="program">Interested Program</label>
+                                <select
+                                    class="w-full rounded-lg border-border-color dark:border-slate-600 bg-background-light dark:bg-slate-800 text-text-main dark:text-white focus:ring-primary focus:border-primary"
+                                    id="program">
+                                    <option>B.Tech - Computer Science</option>
+                                    <option>B.Tech - Civil Engineering</option>
+                                    <option>B.Tech - Mechanical Engineering</option>
+                                    <option>B.Tech - Electronics &amp; Comm.</option>
+                                    <option>M.Tech - Computer Science</option>
+                                    <option>M.Tech - Civil Engineering</option>
+                                    <option>Polytechnic - Mechanical</option>
+                                    <option>Polytechnic - Civil</option>
+                                </select>
+                            </div>
+                            <button
+                                class="w-full bg-primary hover:bg-secondary text-white font-bold py-3 rounded-lg shadow-lg hover:shadow-xl transition-all mt-2"
+                                type="button">
+                                Register Now
+                            </button>
+                            <p class="text-xs text-center text-text-muted mt-4">By clicking Register Now, you agree to
+                                our Terms &amp; Conditions.</p>
+                        </form>
+                    </div>
+                    <div
+                        class="absolute top-4 -right-4 w-full h-full bg-secondary rounded-2xl -z-10 opacity-20 transform rotate-2">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="min-h-screen flex items-center py-20 px-6 overflow-hidden relative">
+
+        <!-- Subtle radial glow bg -->
+        <div class="absolute inset-0 pointer-events-none" style="background: radial-gradient(circle at 78% 18%, rgba(139,26,26,0.04) 0%, transparent 50%),
+                        radial-gradient(circle at 12% 80%, rgba(201,168,76,0.05) 0%, transparent 42%);">
+        </div>
+
+        <div
+            class="max-w-6xl mx-auto w-full grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-20 items-center relative z-10">
+
+            <!-- ────────────────────────────
+         LEFT — Single Image
+    ──────────────────────────── -->
+            <div class="js-img relative img-corner">
+                <div class="rounded-xl overflow-hidden shadow-2xl">
+                    <img src="https://i.ibb.co/ZphHnMYP/about-igef.png" alt="Indo Global Education Campus"
+                        class="w-full object-cover block transition-transform duration-700 ease-out hover:scale-[1.03]"
+                        style="height: 520px;" />
+                </div>
+
+                <!-- Floating years badge -->
+                <div class="js-badge absolute -bottom-5 -right-5 bg-crimson text-white rounded-xl px-5 py-4 shadow-2xl">
+                    <p class="font-playfair text-3xl font-black leading-none">20+</p>
+                    <p class="text-[0.65rem] mt-1 tracking-[0.18em] uppercase text-red-200">Years of Excellence</p>
+                </div>
+            </div>
+
+            <!-- ────────────────────────────
+         RIGHT — Content
+    ──────────────────────────── -->
+            <div class="flex flex-col">
+
+                <!-- Tag -->
+                <span
+                    class="js-tag self-start bg-crimson text-white text-[0.65rem] font-medium tracking-[0.18em] uppercase px-3 py-1.5 rounded-sm mb-5">
+                    About Indo Global
+                </span>
+
+                <!-- Title -->
+                <h2 class="js-title font-playfair text-4xl lg:text-5xl font-black leading-[1.1] text-ink mb-5">
+                    Punjab's Leading<br />
+                    <span class="text-crimson">Education</span> Group
+                </h2>
+
+                <!-- Animated divider -->
+                <div class="js-div h-[3px] w-12 rounded-full mb-6"
+                    style="background: linear-gradient(90deg, #8B1A1A, #C9A84C);"></div>
+
+                <!-- Description -->
+                <p class="js-desc text-muted text-base leading-[1.9] mb-8">
+                    Indo Global Colleges is Punjab's leading Education Group, located in a lush green, 30+ acre campus
+                    in the
+                    foothills of Shivalik Ranges, barely 5 km from Chandigarh. With 4 institutions, 10,000+ alumni,
+                    3,000+
+                    students and 250+ distinguished faculty, it is a self-financed institute founded in 2003 with a
+                    vision to
+                    deliver world-class quality education.
+                </p>
+
+                <!-- Stats 2×2 Grid -->
+                <div class="grid grid-cols-2 gap-4 mb-8">
+
+                    <!-- Card 1 – Alumni -->
+                    <div id="sc1"
+                        class="js-card stat-card bg-white border border-border rounded-xl p-5 flex items-start gap-4 cursor-default">
+                        <div class="w-11 h-11 rounded-lg bg-red-50 flex items-center justify-center shrink-0">
+                            <svg class="w-5 h-5 stroke-crimson fill-none" stroke-width="1.7" viewBox="0 0 24 24">
+                                <path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2" />
+                                <circle cx="9" cy="7" r="4" />
+                                <path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75" />
+                            </svg>
+                        </div>
+                        <div>
+                            <p class="font-playfair text-2xl font-bold text-crimson leading-none">10k+</p>
+                            <p class="text-xs text-muted mt-1">Alumni Network</p>
+                            <p class="text-sm font-medium text-body mt-1.5">Strong Alumni Community</p>
+                        </div>
+                    </div>
+
+                    <!-- Card 2 – Institutions -->
+                    <div id="sc2"
+                        class="js-card stat-card bg-white border border-border rounded-xl p-5 flex items-start gap-4 cursor-default">
+                        <div class="w-11 h-11 rounded-lg bg-red-50 flex items-center justify-center shrink-0">
+                            <svg class="w-5 h-5 stroke-crimson fill-none" stroke-width="1.7" viewBox="0 0 24 24">
+                                <path d="M22 10v6M2 10l10-5 10 5-10 5z" />
+                                <path d="M6 12v5c3 3 9 3 12 0v-5" />
+                            </svg>
+                        </div>
+                        <div>
+                            <p class="font-playfair text-2xl font-bold text-crimson leading-none">4</p>
+                            <p class="text-xs text-muted mt-1">Institutions</p>
+                            <p class="text-sm font-medium text-body mt-1.5">Diverse Academic Streams</p>
+                        </div>
+                    </div>
+
+                    <!-- Card 3 – Campus -->
+                    <div id="sc3"
+                        class="js-card stat-card bg-white border border-border rounded-xl p-5 flex items-start gap-4 cursor-default">
+                        <div class="w-11 h-11 rounded-lg bg-red-50 flex items-center justify-center shrink-0">
+                            <svg class="w-5 h-5 stroke-crimson fill-none" stroke-width="1.7" viewBox="0 0 24 24">
+                                <path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z" />
+                                <polyline points="9 22 9 12 15 12 15 22" />
+                            </svg>
+                        </div>
+                        <div>
+                            <p class="font-playfair text-2xl font-bold text-crimson leading-none">30+</p>
+                            <p class="text-xs text-muted mt-1">Acre Campus</p>
+                            <p class="text-sm font-medium text-body mt-1.5">Lush Green Environment</p>
+                        </div>
+                    </div>
+
+                    <!-- Card 4 – Faculty -->
+                    <div id="sc4"
+                        class="js-card stat-card bg-white border border-border rounded-xl p-5 flex items-start gap-4 cursor-default">
+                        <div class="w-11 h-11 rounded-lg bg-red-50 flex items-center justify-center shrink-0">
+                            <svg class="w-5 h-5 stroke-crimson fill-none" stroke-width="1.7" viewBox="0 0 24 24">
+                                <path
+                                    d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                            </svg>
+                        </div>
+                        <div>
+                            <p class="font-playfair text-2xl font-bold text-crimson leading-none">250+</p>
+                            <p class="text-xs text-muted mt-1">Expert Faculty</p>
+                            <p class="text-sm font-medium text-body mt-1.5">Accomplished Backgrounds</p>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- CTA Row -->
+                <div class="js-cta flex items-center gap-5">
+                    <a href="#"
+                        class="inline-flex items-center gap-2 bg-crimson hover:bg-crimson-light text-white text-sm font-medium tracking-wide px-6 py-3 rounded-sm transition-all duration-300 hover:translate-x-1 group">
+                        Explore More
+                        <svg class="w-4 h-4 stroke-white fill-none stroke-2 transition-transform duration-300 group-hover:translate-x-1"
+                            viewBox="0 0 24 24">
+                            <line x1="5" y1="12" x2="19" y2="12" />
+                            <polyline points="12 5 19 12 12 19" />
+                        </svg>
+                    </a>
+                    <a href="#"
+                        class="text-sm text-crimson font-medium hover:underline underline-offset-4 transition-all duration-200">
+                        Learn About Us →
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <style>
+        /* Initial hidden states for GSAP */
+        .js-img {
+            opacity: 0;
+            transform: translateX(-30px);
+        }
+
+        .js-badge {
+            opacity: 0;
+            transform: translateY(10px);
+        }
+
+        .js-tag {
+            opacity: 0;
+            transform: translateY(20px);
+        }
+
+        .js-title {
+            opacity: 0;
+            transform: translateY(20px);
+        }
+
+        .js-div {
+            opacity: 0;
+            transform: scaleX(0);
+            transform-origin: left;
+        }
+
+        .js-desc {
+            opacity: 0;
+            transform: translateY(20px);
+        }
+
+        .js-card {
+            opacity: 0;
+            transform: translateY(20px);
+        }
+
+        .js-cta {
+            opacity: 0;
+            transform: translateY(20px);
+        }
+
+        /* Hover lift for cards */
+        .stat-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .stat-card:hover {
+            transform: translateY(-4px) !important;
+            box-shadow: 0 14px 30px rgba(139, 26, 26, 0.12);
+        }
+
+        /* Corner decorators on image wrapper */
+        .img-corner::before {
+            content: '';
+            position: absolute;
+            top: -10px;
+            left: -10px;
+            width: 34px;
+            height: 34px;
+            border-top: 3px solid #8B1A1A;
+            border-left: 3px solid #8B1A1A;
+            border-radius: 1px;
+            pointer-events: none;
+        }
+
+        .img-corner::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            right: -10px;
+            width: 34px;
+            height: 34px;
+            border-bottom: 3px solid #C9A84C;
+            border-right: 3px solid #C9A84C;
+            border-radius: 1px;
+            pointer-events: none;
+        }
+    </style>
+
+    <script>
+        gsap.registerPlugin(ScrollTrigger);
+
+        const tl = gsap.timeline({
+            scrollTrigger: {
+                trigger: 'section',
+                start: 'top 72%',
+                once: true
+            }
+        });
+
+        tl
+            // Image slides in from left
+            .to('.js-img', { opacity: 1, x: 0, duration: 0.8, ease: 'power3.out' }, 0)
+            // Badge pops up
+            .to('.js-badge', { opacity: 1, y: 0, duration: 0.5, ease: 'back.out(1.7)' }, 0.55)
+            // Content staggered
+            .to('.js-tag', { opacity: 1, y: 0, duration: 0.45, ease: 'power2.out' }, 0.2)
+            .to('.js-title', { opacity: 1, y: 0, duration: 0.55, ease: 'power3.out' }, 0.35)
+            .to('.js-div', { opacity: 1, scaleX: 1, duration: 0.5, ease: 'power2.out' }, 0.52)
+            .to('.js-desc', { opacity: 1, y: 0, duration: 0.5, ease: 'power2.out' }, 0.62)
+            // Cards cascade
+            .to('#sc1', { opacity: 1, y: 0, duration: 0.42, ease: 'power2.out' }, 0.72)
+            .to('#sc2', { opacity: 1, y: 0, duration: 0.42, ease: 'power2.out' }, 0.84)
+            .to('#sc3', { opacity: 1, y: 0, duration: 0.42, ease: 'power2.out' }, 0.96)
+            .to('#sc4', { opacity: 1, y: 0, duration: 0.42, ease: 'power2.out' }, 1.08)
+            // CTA
+            .to('.js-cta', { opacity: 1, y: 0, duration: 0.4, ease: 'power2.out' }, 1.2);
+    </script>
+
+    <section class="py-20 bg-white dark:bg-slate-900">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl lg:text-4xl font-display font-bold text-text-main dark:text-white mb-4">Why Choose
+                    IGEF?</h2>
+                <p class="text-text-muted dark:text-slate-400 max-w-2xl mx-auto">We don't just teach engineering; we
+                    build future leaders through a holistic approach to education.</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div
+                    class="group p-6 rounded-2xl bg-background-light dark:bg-surface-dark border border-border-color dark:border-slate-800 hover:shadow-xl hover:border-secondary/30 transition-all duration-300">
+                    <div
+                        class="size-14 rounded-xl bg-primary/10 dark:bg-primary/30 flex items-center justify-center text-primary dark:text-primary-light mb-6 group-hover:scale-110 transition-transform">
+                        <span class="material-symbols-outlined text-3xl">work_history</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-text-main dark:text-white mb-2">Top Placements</h3>
+                    <p class="text-text-muted dark:text-slate-400 text-sm">Consistent placement records with top MNCs
+                        and Fortune 500 companies.</p>
+                </div>
+                <div
+                    class="group p-6 rounded-2xl bg-background-light dark:bg-surface-dark border border-border-color dark:border-slate-800 hover:shadow-xl hover:border-secondary/30 transition-all duration-300">
+                    <div
+                        class="size-14 rounded-xl bg-secondary/10 dark:bg-secondary/30 flex items-center justify-center text-secondary dark:text-secondary mb-6 group-hover:scale-110 transition-transform">
+                        <span class="material-symbols-outlined text-3xl">science</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-text-main dark:text-white mb-2">Advanced Labs</h3>
+                    <p class="text-text-muted dark:text-slate-400 text-sm">State-of-the-art laboratories equipped with
+                        modern machinery for hands-on experience.</p>
+                </div>
+                <div
+                    class="group p-6 rounded-2xl bg-background-light dark:bg-surface-dark border border-border-color dark:border-slate-800 hover:shadow-xl hover:border-secondary/30 transition-all duration-300">
+                    <div
+                        class="size-14 rounded-xl bg-primary/10 dark:bg-primary/30 flex items-center justify-center text-primary dark:text-primary-light mb-6 group-hover:scale-110 transition-transform">
+                        <span class="material-symbols-outlined text-3xl">school</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-text-main dark:text-white mb-2">Expert Faculty</h3>
+                    <p class="text-text-muted dark:text-slate-400 text-sm">Learn from PhD holders and industry veterans
+                        dedicated to your academic growth.</p>
+                </div>
+                <div
+                    class="group p-6 rounded-2xl bg-background-light dark:bg-surface-dark border border-border-color dark:border-slate-800 hover:shadow-xl hover:border-secondary/30 transition-all duration-300">
+                    <div
+                        class="size-14 rounded-xl bg-secondary/10 dark:bg-secondary/30 flex items-center justify-center text-secondary dark:text-secondary mb-6 group-hover:scale-110 transition-transform">
+                        <span class="material-symbols-outlined text-3xl">emoji_events</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-text-main dark:text-white mb-2">Holistic Growth</h3>
+                    <p class="text-text-muted dark:text-slate-400 text-sm">Focus on sports, culture, and personality
+                        development alongside academics.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-20 bg-background-light dark:bg-background-dark" id="programs">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <span class="text-secondary font-bold tracking-wider uppercase text-sm">Academic Excellence</span>
+                <h2 class="text-3xl lg:text-4xl font-display font-bold text-text-main dark:text-white mt-2">Programs
+                    Offered</h2>
+                <p class="text-text-muted dark:text-slate-400 mt-4 max-w-2xl mx-auto">Explore our diverse range of
+                    engineering programs designed to shape the innovators of tomorrow. From foundational Polytechnic
+                    courses to advanced M.Tech specializations.</p>
+            </div>
+            <div class="mb-16">
+                <div class="flex items-center gap-4 mb-8">
+                    <h3 class="text-2xl font-bold text-primary dark:text-white border-l-4 border-secondary pl-4">B.Tech
+                        Programs</h3>
+                    <span
+                        class="bg-primary/10 text-primary text-xs font-bold px-3 py-1 rounded-full border border-primary/20">4
+                        Years</span>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <div
+                        class="bg-white dark:bg-surface-dark rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 group flex flex-col h-full border border-border-color dark:border-slate-800">
+                        <div class="relative h-48 overflow-hidden">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent z-10"></div>
+                            <img alt="Students working on laptops coding in a computer lab"
+                                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                                data-alt="Students coding in a modern computer lab"
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuArTdUDHUx1ZWqC2E1Z87oE-dbku4AmpzlMfl4LhYLVJyrperJc-qIcphBAt4Qq0oisGMj7IJttFaa9ggPIf7AEH9sS0kJl66LpXyhRgNada5xwdLl8XPJo5v4I5JNkq6_t3AlYMpo9cKX296IxFvMoRx2a_HMPI84T7tRYYhQoVKRGfX2idBTCeEITvhMKyAIZuEKgq0Zrb33Nfgu0lu-39kZeyHzGB-rld2dvE9HH1MpsDkcfCildk3IlX0ZMP2TZwRnz-6ktr5Z3" />
+                        </div>
+                        <div class="p-5 flex flex-col flex-grow">
+                            <h3 class="text-lg font-bold text-text-main dark:text-white mb-2">Computer Science</h3>
+                            <ul class="text-sm text-text-muted dark:text-slate-400 space-y-2 mb-4 list-disc pl-4">
+                                <li>AI &amp; Machine Learning</li>
+                                <li>Cloud Computing</li>
+                                <li>Data Science</li>
+                            </ul>
+                            <div
+                                class="mt-auto pt-4 border-t border-border-color dark:border-slate-800 flex flex-col gap-2">
+                                <button
+                                    class="w-full py-2 border border-primary text-primary hover:bg-primary hover:text-white rounded-lg text-sm font-semibold transition-colors">Know
+                                    More</button>
+                                <button
+                                    class="w-full py-2 border border-border-color dark:border-slate-700 text-text-muted dark:text-slate-400 hover:bg-background-light dark:hover:bg-slate-800 rounded-lg text-xs font-medium transition-colors flex items-center justify-center gap-2">
+                                    <span class="material-symbols-outlined text-sm">download</span> Download Fee
+                                    Structure
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div
+                        class="bg-white dark:bg-surface-dark rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 group flex flex-col h-full border border-border-color dark:border-slate-800">
+                        <div class="relative h-48 overflow-hidden">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent z-10"></div>
+                            <img alt="Mechanical engineering gears and machinery blueprint"
+                                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                                data-alt="Mechanical engineering workshop machinery"
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuD3fd2rTAusnn5Z9t-fuj9yvfokgywJPbbW6a_udfBv6s6csahH_HUt8g2PMFuwTMMhZ7iVXI8FA_D3wuZLgUreLFyqd6-dWWTCHgCbDnj9KCw22KpfprNbKMumnmUqNFvGABselzJpvkkeAlJF4IRGfraWzrysdHWKWzogt2psM4MTMSpGUvGHm8Rx3tr9Ocuriss4LKUgplc8YS62RAm6sgV-6RKzMS7tNuc49c9_eJlULWIy6BgSKAWozqY8g6K-YtanG2zBY7JU" />
+                        </div>
+                        <div class="p-5 flex flex-col flex-grow">
+                            <h3 class="text-lg font-bold text-text-main dark:text-white mb-2">Mechanical Engg.</h3>
+                            <ul class="text-sm text-text-muted dark:text-slate-400 space-y-2 mb-4 list-disc pl-4">
+                                <li>Robotics &amp; Automation</li>
+                                <li>Thermodynamics</li>
+                                <li>CAD/CAM Design</li>
+                            </ul>
+                            <div
+                                class="mt-auto pt-4 border-t border-border-color dark:border-slate-800 flex flex-col gap-2">
+                                <button
+                                    class="w-full py-2 border border-primary text-primary hover:bg-primary hover:text-white rounded-lg text-sm font-semibold transition-colors">Know
+                                    More</button>
+                                <button
+                                    class="w-full py-2 border border-border-color dark:border-slate-700 text-text-muted dark:text-slate-400 hover:bg-background-light dark:hover:bg-slate-800 rounded-lg text-xs font-medium transition-colors flex items-center justify-center gap-2">
+                                    <span class="material-symbols-outlined text-sm">download</span> Download Fee
+                                    Structure
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div
+                        class="bg-white dark:bg-surface-dark rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 group flex flex-col h-full border border-border-color dark:border-slate-800">
+                        <div class="relative h-48 overflow-hidden">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent z-10"></div>
+                            <img alt="Electronic circuit board close up"
+                                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                                data-alt="Electronics and communication circuit board"
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuBcqbdgmZrMwnYdYTAzCHfEQ2r-_4tEf-g2d-8Rbu7KTCKl6f0BWocg00cXd7oKiJ0jJbrFnABfGe3yRs5DQ6weRWyCv6AcS4Wnu5Vn6wje2I5hNRaZLz7Mp_k5PBEllMlqsAxECJ5-d-X1DgsexLQqT3GHQqQ0prvU0XhWSOLSp2GEYtJ8UmfitiejCnWBXRGDEqD8JFYhaXNrLGH_PUgK4Se8Wd9S7WsHOEIAn2DTN8lC0VNqwIioRi6_tTPfCciD5D9yHgdlDXSD" />
+                        </div>
+                        <div class="p-5 flex flex-col flex-grow">
+                            <h3 class="text-lg font-bold text-text-main dark:text-white mb-2">Electronics &amp; Comm.
+                            </h3>
+                            <ul class="text-sm text-text-muted dark:text-slate-400 space-y-2 mb-4 list-disc pl-4">
+                                <li>VLSI Design</li>
+                                <li>Embedded Systems</li>
+                                <li>IoT &amp; Telecom</li>
+                            </ul>
+                            <div
+                                class="mt-auto pt-4 border-t border-border-color dark:border-slate-800 flex flex-col gap-2">
+                                <button
+                                    class="w-full py-2 border border-primary text-primary hover:bg-primary hover:text-white rounded-lg text-sm font-semibold transition-colors">Know
+                                    More</button>
+                                <button
+                                    class="w-full py-2 border border-border-color dark:border-slate-700 text-text-muted dark:text-slate-400 hover:bg-background-light dark:hover:bg-slate-800 rounded-lg text-xs font-medium transition-colors flex items-center justify-center gap-2">
+                                    <span class="material-symbols-outlined text-sm">download</span> Download Fee
+                                    Structure
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div
+                        class="bg-white dark:bg-surface-dark rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 group flex flex-col h-full border border-border-color dark:border-slate-800">
+                        <div class="relative h-48 overflow-hidden">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent z-10"></div>
+                            <img alt="Civil engineering construction site survey"
+                                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                                data-alt="Civil engineering construction site"
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuD8LIbhrgQweOUX2g-wpebIet5pD8nL70fEUmLRGCxoWuwkhUb6l1lHvB8xJUw6YGN3QVOn3dzoglNJkOJypMOaElUnM30Sl3A5paNniWmEk9GEldxmHTK3CcfENK_w4xImyG0y3wkt5jZStGFslaBHsCIK0pIcFZ6x0JXg3poFtadjLJlyVrj_YuV08kOUVtmskEsbR8IRjy00xK68kOdDY7Fb5d7IoGtG8YC_oJkzRP3Z4ijvyThAMtJCU-1a4yXsr_3FWDgSr5zK" />
+                        </div>
+                        <div class="p-5 flex flex-col flex-grow">
+                            <h3 class="text-lg font-bold text-text-main dark:text-white mb-2">Civil Engineering</h3>
+                            <ul class="text-sm text-text-muted dark:text-slate-400 space-y-2 mb-4 list-disc pl-4">
+                                <li>Structural Engineering</li>
+                                <li>Smart Cities</li>
+                                <li>Surveying &amp; Geotech</li>
+                            </ul>
+                            <div
+                                class="mt-auto pt-4 border-t border-border-color dark:border-slate-800 flex flex-col gap-2">
+                                <button
+                                    class="w-full py-2 border border-primary text-primary hover:bg-primary hover:text-white rounded-lg text-sm font-semibold transition-colors">Know
+                                    More</button>
+                                <button
+                                    class="w-full py-2 border border-border-color dark:border-slate-700 text-text-muted dark:text-slate-400 hover:bg-background-light dark:hover:bg-slate-800 rounded-lg text-xs font-medium transition-colors flex items-center justify-center gap-2">
+                                    <span class="material-symbols-outlined text-sm">download</span> Download Fee
+                                    Structure
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="mb-16">
+                <div class="flex items-center gap-4 mb-8">
+                    <h3 class="text-2xl font-bold text-primary dark:text-white border-l-4 border-secondary pl-4">M.Tech
+                        Programs</h3>
+                    <span
+                        class="bg-secondary/10 text-secondary text-xs font-bold px-3 py-1 rounded-full border border-secondary/20">2
+                        Years</span>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div
+                        class="bg-white dark:bg-surface-dark rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 group flex flex-col h-full border border-border-color dark:border-slate-800">
+                        <div class="relative h-48 overflow-hidden">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent z-10"></div>
+                            <img alt="Advanced bridge construction planning"
+                                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuD8LIbhrgQweOUX2g-wpebIet5pD8nL70fEUmLRGCxoWuwkhUb6l1lHvB8xJUw6YGN3QVOn3dzoglNJkOJypMOaElUnM30Sl3A5paNniWmEk9GEldxmHTK3CcfENK_w4xImyG0y3wkt5jZStGFslaBHsCIK0pIcFZ6x0JXg3poFtadjLJlyVrj_YuV08kOUVtmskEsbR8IRjy00xK68kOdDY7Fb5d7IoGtG8YC_oJkzRP3Z4ijvyThAMtJCU-1a4yXsr_3FWDgSr5zK" />
+                        </div>
+                        <div class="p-5 flex flex-col flex-grow">
+                            <h3 class="text-lg font-bold text-text-main dark:text-white mb-2">Civil Engineering</h3>
+                            <ul class="text-sm text-text-muted dark:text-slate-400 space-y-2 mb-4 list-disc pl-4">
+                                <li>Advanced Structural Design</li>
+                                <li>Transportation Engineering</li>
+                            </ul>
+                            <div
+                                class="mt-auto pt-4 border-t border-border-color dark:border-slate-800 flex flex-col gap-2">
+                                <button
+                                    class="w-full py-2 border border-secondary text-secondary hover:bg-secondary hover:text-white rounded-lg text-sm font-semibold transition-colors">Know
+                                    More</button>
+                                <button
+                                    class="w-full py-2 border border-border-color dark:border-slate-700 text-text-muted dark:text-slate-400 hover:bg-background-light dark:hover:bg-slate-800 rounded-lg text-xs font-medium transition-colors flex items-center justify-center gap-2">
+                                    <span class="material-symbols-outlined text-sm">download</span> Download Fee
+                                    Structure
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div
+                        class="bg-white dark:bg-surface-dark rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 group flex flex-col h-full border border-border-color dark:border-slate-800">
+                        <div class="relative h-48 overflow-hidden">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent z-10"></div>
+                            <img alt="Data server center visualization"
+                                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuArTdUDHUx1ZWqC2E1Z87oE-dbku4AmpzlMfl4LhYLVJyrperJc-qIcphBAt4Qq0oisGMj7IJttFaa9ggPIf7AEH9sS0kJl66LpXyhRgNada5xwdLl8XPJo5v4I5JNkq6_t3AlYMpo9cKX296IxFvMoRx2a_HMPI84T7tRYYhQoVKRGfX2idBTCeEITvhMKyAIZuEKgq0Zrb33Nfgu0lu-39kZeyHzGB-rld2dvE9HH1MpsDkcfCildk3IlX0ZMP2TZwRnz-6ktr5Z3" />
+                        </div>
+                        <div class="p-5 flex flex-col flex-grow">
+                            <h3 class="text-lg font-bold text-text-main dark:text-white mb-2">Computer Science</h3>
+                            <ul class="text-sm text-text-muted dark:text-slate-400 space-y-2 mb-4 list-disc pl-4">
+                                <li>Advanced Algorithms</li>
+                                <li>Cyber Security Research</li>
+                            </ul>
+                            <div
+                                class="mt-auto pt-4 border-t border-border-color dark:border-slate-800 flex flex-col gap-2">
+                                <button
+                                    class="w-full py-2 border border-secondary text-secondary hover:bg-secondary hover:text-white rounded-lg text-sm font-semibold transition-colors">Know
+                                    More</button>
+                                <button
+                                    class="w-full py-2 border border-border-color dark:border-slate-700 text-text-muted dark:text-slate-400 hover:bg-background-light dark:hover:bg-slate-800 rounded-lg text-xs font-medium transition-colors flex items-center justify-center gap-2">
+                                    <span class="material-symbols-outlined text-sm">download</span> Download Fee
+                                    Structure
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div
+                        class="bg-white dark:bg-surface-dark rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 group flex flex-col h-full border border-border-color dark:border-slate-800">
+                        <div class="relative h-48 overflow-hidden">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent z-10"></div>
+                            <img alt="Advanced microprocessor chip design"
+                                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuBcqbdgmZrMwnYdYTAzCHfEQ2r-_4tEf-g2d-8Rbu7KTCKl6f0BWocg00cXd7oKiJ0jJbrFnABfGe3yRs5DQ6weRWyCv6AcS4Wnu5Vn6wje2I5hNRaZLz7Mp_k5PBEllMlqsAxECJ5-d-X1DgsexLQqT3GHQqQ0prvU0XhWSOLSp2GEYtJ8UmfitiejCnWBXRGDEqD8JFYhaXNrLGH_PUgK4Se8Wd9S7WsHOEIAn2DTN8lC0VNqwIioRi6_tTPfCciD5D9yHgdlDXSD" />
+                        </div>
+                        <div class="p-5 flex flex-col flex-grow">
+                            <h3 class="text-lg font-bold text-text-main dark:text-white mb-2">Electronics &amp; Comm.
+                            </h3>
+                            <ul class="text-sm text-text-muted dark:text-slate-400 space-y-2 mb-4 list-disc pl-4">
+                                <li>Wireless Communication</li>
+                                <li>Signal Processing</li>
+                            </ul>
+                            <div
+                                class="mt-auto pt-4 border-t border-border-color dark:border-slate-800 flex flex-col gap-2">
+                                <button
+                                    class="w-full py-2 border border-secondary text-secondary hover:bg-secondary hover:text-white rounded-lg text-sm font-semibold transition-colors">Know
+                                    More</button>
+                                <button
+                                    class="w-full py-2 border border-border-color dark:border-slate-700 text-text-muted dark:text-slate-400 hover:bg-background-light dark:hover:bg-slate-800 rounded-lg text-xs font-medium transition-colors flex items-center justify-center gap-2">
+                                    <span class="material-symbols-outlined text-sm">download</span> Download Fee
+                                    Structure
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <div class="flex items-center gap-4 mb-8">
+                    <h3 class="text-2xl font-bold text-primary dark:text-white border-l-4 border-secondary pl-4">
+                        Polytechnic Programs</h3>
+                    <span
+                        class="bg-background-light border border-border-color dark:bg-slate-700 text-text-body dark:text-slate-300 text-xs font-bold px-3 py-1 rounded-full">3
+                        Years</span>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl">
+                    <div
+                        class="bg-white dark:bg-surface-dark rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 group flex flex-col h-full border border-border-color dark:border-slate-800">
+                        <div class="relative h-48 overflow-hidden">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent z-10"></div>
+                            <img alt="Lathe machine workshop"
+                                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuD3fd2rTAusnn5Z9t-fuj9yvfokgywJPbbW6a_udfBv6s6csahH_HUt8g2PMFuwTMMhZ7iVXI8FA_D3wuZLgUreLFyqd6-dWWTCHgCbDnj9KCw22KpfprNbKMumnmUqNFvGABselzJpvkkeAlJF4IRGfraWzrysdHWKWzogt2psM4MTMSpGUvGHm8Rx3tr9Ocuriss4LKUgplc8YS62RAm6sgV-6RKzMS7tNuc49c9_eJlULWIy6BgSKAWozqY8g6K-YtanG2zBY7JU" />
+                        </div>
+                        <div class="p-5 flex flex-col flex-grow">
+                            <h3 class="text-lg font-bold text-text-main dark:text-white mb-2">Mechanical Engineering
+                            </h3>
+                            <ul class="text-sm text-text-muted dark:text-slate-400 space-y-2 mb-4 list-disc pl-4">
+                                <li>Manufacturing Processes</li>
+                                <li>Automobile Engineering</li>
+                            </ul>
+                            <div
+                                class="mt-auto pt-4 border-t border-border-color dark:border-slate-800 flex flex-col gap-2">
+                                <button
+                                    class="w-full py-2 border border-text-muted text-text-body dark:text-slate-300 hover:bg-primary hover:text-white hover:border-primary dark:hover:bg-slate-600 rounded-lg text-sm font-semibold transition-colors">Know
+                                    More</button>
+                                <button
+                                    class="w-full py-2 border border-border-color dark:border-slate-700 text-text-muted dark:text-slate-400 hover:bg-background-light dark:hover:bg-slate-800 rounded-lg text-xs font-medium transition-colors flex items-center justify-center gap-2">
+                                    <span class="material-symbols-outlined text-sm">download</span> Download Fee
+                                    Structure
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div
+                        class="bg-white dark:bg-surface-dark rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 group flex flex-col h-full border border-border-color dark:border-slate-800">
+                        <div class="relative h-48 overflow-hidden">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent z-10"></div>
+                            <img alt="Road survey equipment"
+                                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuD8LIbhrgQweOUX2g-wpebIet5pD8nL70fEUmLRGCxoWuwkhUb6l1lHvB8xJUw6YGN3QVOn3dzoglNJkOJypMOaElUnM30Sl3A5paNniWmEk9GEldxmHTK3CcfENK_w4xImyG0y3wkt5jZStGFslaBHsCIK0pIcFZ6x0JXg3poFtadjLJlyVrj_YuV08kOUVtmskEsbR8IRjy00xK68kOdDY7Fb5d7IoGtG8YC_oJkzRP3Z4ijvyThAMtJCU-1a4yXsr_3FWDgSr5zK" />
+                        </div>
+                        <div class="p-5 flex flex-col flex-grow">
+                            <h3 class="text-lg font-bold text-text-main dark:text-white mb-2">Civil Engineering</h3>
+                            <ul class="text-sm text-text-muted dark:text-slate-400 space-y-2 mb-4 list-disc pl-4">
+                                <li>Construction Materials</li>
+                                <li>Public Health Engineering</li>
+                            </ul>
+                            <div
+                                class="mt-auto pt-4 border-t border-border-color dark:border-slate-800 flex flex-col gap-2">
+                                <button
+                                    class="w-full py-2 border border-text-muted text-text-body dark:text-slate-300 hover:bg-primary hover:text-white hover:border-primary dark:hover:bg-slate-600 rounded-lg text-sm font-semibold transition-colors">Know
+                                    More</button>
+                                <button
+                                    class="w-full py-2 border border-border-color dark:border-slate-700 text-text-muted dark:text-slate-400 hover:bg-background-light dark:hover:bg-slate-800 rounded-lg text-xs font-medium transition-colors flex items-center justify-center gap-2">
+                                    <span class="material-symbols-outlined text-sm">download</span> Download Fee
+                                    Structure
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-24 bg-primary relative overflow-hidden" id="campus">
+        <div
+            class="absolute top-0 right-0 w-64 h-64 bg-secondary opacity-20 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2">
+        </div>
+        <div
+            class="absolute bottom-0 left-0 w-96 h-96 bg-secondary opacity-20 rounded-full blur-3xl translate-y-1/2 -translate-x-1/2">
+        </div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid lg:grid-cols-2 gap-16 items-center">
+                <div class="order-2 lg:order-1">
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="space-y-4 mt-8">
+                            <img alt="Modern college building architecture"
+                                class="rounded-2xl shadow-xl w-full h-48 object-cover hover:scale-105 transition-transform duration-500 border-2 border-secondary/20"
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuBYbj2yrkTxyBFzeQ0lIWN6yKiux4vnqeImMaL2VQ2syRUbwbFPTbQ9pHPfDv5mVWk0xC9cD0_XzNeEZjEXEuFG-gpV_lgb1zNzNU1bB-HAJzQix0O40F9uSDMVzf6TN3wNjrM_4gPyVFlR1ZtRbkfr34sP0SaOSt46OZefEODyC1dV2QPTXcHZmakQhdwe87jSK2C10m7qgBIEPUfnDHkhU5_1q2HnHd8BmjDcPHUlbCKX9ge5Pv1cWbL9nwgs2Q9vacDnza2WMtMR" />
+                            <img alt="Students studying in library"
+                                class="rounded-2xl shadow-xl w-full h-64 object-cover hover:scale-105 transition-transform duration-500 border-2 border-secondary/20"
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuDSFfa86dkC4fdiYkHUp-t4jrupVZ_4Rmk2WkAtUYEff-8HbAeLGQ5FZX-OOzi6Zkf7Fzrsn0R0wFMGh69ODOVmsIzskDd1t35xv1PW1QqaCIqzg2fnwBfeLHq6GWCsyjdBhZz7NMg6iplnQ8ZH3EG-V41-OH57k9ksRLZQOR6erNQ-5Ex9OLAe6kKEuj1KGs9kGbG6WT7CuqPloTxgTx2dJ9Zf2leLOsdajXMx9lVQ5hAT2TunQF4hoC5PGaPJN323U_5HMVqg1knf" />
+                        </div>
+                        <div class="space-y-4">
+                            <img alt="Green lush campus garden"
+                                class="rounded-2xl shadow-xl w-full h-64 object-cover hover:scale-105 transition-transform duration-500 border-2 border-secondary/20"
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuAyEM5UwD0qZzxBIMRW-0dOEMB5_tvheUJw-0OrP36Qf_pefc-4S3v8KmTNVtE6X7q8dnxa178hWIhqekwq32EtHAHb3elAJiWgPN67erxlZpEDanIAw3QzH0bxHPqUWJua6FVllW9juNfIWrOfhDvH6Lo8W7-lqys3TyvcVVQDQxJOHvQaZSpDLeTf34w463DRtysbhOpUhlKVxiI9l-qOFMK6_Tqed8bEV1rdeOcwe_csZt0h9VhZV5MQ92A-y7JtUOSO2Lgxe_s8" />
+                            <img alt="Students participating in sports"
+                                class="rounded-2xl shadow-xl w-full h-48 object-cover hover:scale-105 transition-transform duration-500 border-2 border-secondary/20"
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuAlzy4TG1oBnNvwQUouJ_d91ElMvpPDMMk0ZTtHs27s_28o73x07GlPMXPbUn0SzQ4bfWN_k0LYSahhqsJxFTiixff3Qz9SZlwyAWI9VwIv7wr074mtgDzFUMvsx-9dz9soK3iFVGJp4q7mZJXsR_Nt6t2JxLzKSc3EYoq0HcymWiHQQILo5SHmpL3IKtHOdBAUYbPHcCflMq8isDA0Dk4bwqZ_2MHua3t0l2vnaqeRUHPf9UvQQQvDbmbRTVQy_fEA1Zpjy_kNi7OD" />
+                        </div>
+                    </div>
+                </div>
+                <div class="text-white order-1 lg:order-2">
+                    <span class="text-secondary font-bold tracking-wider uppercase text-sm">Indo Global College of
+                        Engineering</span>
+                    <h2 class="text-4xl lg:text-5xl font-display font-bold mt-2 mb-6">About Program</h2>
+                    <h3 class="text-xl lg:text-2xl font-display font-medium text-white/90 mb-4">Best Engineering College
+                        in Chandigarh, Punjab</h3>
+                    <p class="text-white/80 text-base mb-8 leading-relaxed">If you want to pursue your professional
+                        degree
+                        from one of the best Chandigarh colleges or leading Chandigarh Engineering Colleges, then IGEF
+                        is an ideal place for you. Last year many students were hired in excellent jobs in prestigious
+                        firms as compared to other Colleges and Universities in Chandigarh.</p>
+                    <ul class="space-y-4 mb-8">
+                        <li class="flex items-start gap-3">
+                            <div class="p-2 rounded-lg bg-white/10 text-secondary mt-1"><span
+                                    class="material-symbols-outlined">trending_up</span></div>
+                            <div>
+                                <h4 class="font-bold text-2xl text-secondary">95%</h4>
+                                <p class="text-white/70 text-sm">Placement Rate</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <div class="p-2 rounded-lg bg-white/10 text-secondary mt-1"><span
+                                    class="material-symbols-outlined">handshake</span></div>
+                            <div>
+                                <h4 class="font-bold text-2xl text-secondary">50+</h4>
+                                <p class="text-white/70 text-sm">Corporate Partners</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <div class="p-2 rounded-lg bg-white/10 text-secondary mt-1"><span
+                                    class="material-symbols-outlined">settings_applications</span></div>
+                            <div>
+                                <h4 class="font-bold text-2xl text-secondary">9</h4>
+                                <p class="text-white/70 text-sm">Engineering Programs</p>
+                            </div>
+                        </li>
+                    </ul>
+                    <button
+                        class="bg-white text-primary px-8 py-3 rounded-full font-bold hover:bg-secondary hover:text-white transition-all shadow-lg hover:shadow-secondary/50">
+                        Explore Campus
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-20 bg-background-light dark:bg-background-dark" id="placements">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl lg:text-4xl font-display font-bold text-text-main dark:text-white mb-4">Placement
+                    Highlights</h2>
+                <div class="w-24 h-1 bg-secondary mx-auto rounded-full"></div>
+            </div>
+            <div class="grid grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
+                <div
+                    class="bg-white dark:bg-surface-dark p-6 rounded-xl shadow-sm border-b-4 border-secondary text-center">
+                    <p class="text-4xl lg:text-5xl font-black text-primary dark:text-white mb-2">8700+</p>
+                    <p class="text-text-muted uppercase tracking-wide text-sm font-semibold">Students Placed</p>
+                </div>
+                <div
+                    class="bg-white dark:bg-surface-dark p-6 rounded-xl shadow-sm border-b-4 border-primary text-center">
+                    <p class="text-4xl lg:text-5xl font-black text-primary dark:text-white mb-2">40 LPA</p>
+                    <p class="text-text-muted uppercase tracking-wide text-sm font-semibold">Highest Package</p>
+                </div>
+                <div
+                    class="bg-white dark:bg-surface-dark p-6 rounded-xl shadow-sm border-b-4 border-secondary text-center">
+                    <p class="text-4xl lg:text-5xl font-black text-primary dark:text-white mb-2">350+</p>
+                    <p class="text-text-muted uppercase tracking-wide text-sm font-semibold">Recruiters</p>
+                </div>
+                <div
+                    class="bg-white dark:bg-surface-dark p-6 rounded-xl shadow-sm border-b-4 border-primary text-center">
+                    <p class="text-4xl lg:text-5xl font-black text-primary dark:text-white mb-2">95%</p>
+                    <p class="text-text-muted uppercase tracking-wide text-sm font-semibold">Placement Rate</p>
+                </div>
+            </div>
+            <div
+                class="flex flex-wrap justify-center items-center gap-8 lg:gap-16 opacity-70 grayscale hover:grayscale-0 transition-all duration-500">
+                <div class="flex items-center gap-2 text-2xl font-bold text-text-muted">
+                    <span class="material-symbols-outlined text-4xl">rocket_launch</span> INFOSYS
+                </div>
+                <div class="flex items-center gap-2 text-2xl font-bold text-text-muted">
+                    <span class="material-symbols-outlined text-4xl">terminal</span> TCS
+                </div>
+                <div class="flex items-center gap-2 text-2xl font-bold text-text-muted">
+                    <span class="material-symbols-outlined text-4xl">cloud</span> WIPRO
+                </div>
+                <div class="flex items-center gap-2 text-2xl font-bold text-text-muted">
+                    <span class="material-symbols-outlined text-4xl">database</span> HCL
+                </div>
+                <div class="flex items-center gap-2 text-2xl font-bold text-text-muted">
+                    <span class="material-symbols-outlined text-4xl">devices</span> IBM
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-24 relative overflow-hidden" id="scholarships">
+        <div
+            class="absolute inset-0 bg-gradient-to-br from-cyan-50 via-teal-50 to-white dark:from-slate-900 dark:via-slate-800 dark:to-slate-900 -z-10">
+        </div>
+        <div
+            class="absolute top-0 right-0 w-[500px] h-[500px] bg-secondary/10 rounded-full blur-[100px] translate-x-1/2 -translate-y-1/2">
+        </div>
+        <div
+            class="absolute bottom-0 left-0 w-[300px] h-[300px] bg-primary/10 rounded-full blur-[80px] -translate-x-1/3 translate-y-1/3">
+        </div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 relative z-10">
+                <span class="text-secondary font-bold tracking-wider uppercase text-sm mb-2 block">Financial Aid</span>
+                <h2 class="text-3xl lg:text-4xl font-display font-bold text-text-main dark:text-white mb-4">Empowering
+                    Merit: Scholarship Opportunities</h2>
+                <p class="text-text-muted dark:text-slate-400 max-w-2xl mx-auto">We believe financial constraints should
+                    never be a barrier to quality education. Explore our range of scholarships designed to reward
+                    excellence and support ambition.</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+                <div
+                    class="glass-panel rounded-2xl p-8 relative overflow-hidden group hover:scale-[1.02] transition-all duration-300 shadow-xl shadow-secondary/5 border-t border-white/60">
+                    <div class="absolute top-0 right-0 p-6 opacity-10 group-hover:opacity-20 transition-opacity">
+                        <span class="material-symbols-outlined text-8xl text-secondary">school</span>
+                    </div>
+                    <div class="relative z-10">
+                        <div
+                            class="size-14 rounded-xl bg-gradient-to-br from-secondary to-[#B2923A] flex items-center justify-center text-white mb-6 shadow-lg shadow-secondary/30">
+                            <span class="material-symbols-outlined text-3xl">school</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-text-main dark:text-white mb-3">Merit-Based Scholarships</h3>
+                        <p class="text-text-muted dark:text-slate-300 text-sm mb-6 leading-relaxed">
+                            Full and partial tuition waivers for academically brilliant students securing 90% or above
+                            in their 10+2 examinations.
+                        </p>
+                        <div class="flex items-center gap-2 text-sm font-semibold text-secondary">
+                            <span>Up to 100% Waiver</span>
+                            <span class="material-symbols-outlined text-lg">arrow_forward</span>
+                        </div>
+                    </div>
+                </div>
+                <div
+                    class="glass-panel rounded-2xl p-8 relative overflow-hidden group hover:scale-[1.02] transition-all duration-300 shadow-xl shadow-secondary/5 border-t border-white/60 delay-100">
+                    <div class="absolute top-0 right-0 p-6 opacity-10 group-hover:opacity-20 transition-opacity">
+                        <span class="material-symbols-outlined text-8xl text-primary">emoji_events</span>
+                    </div>
+                    <div class="relative z-10">
+                        <div
+                            class="size-14 rounded-xl bg-gradient-to-br from-primary to-primary-light flex items-center justify-center text-white mb-6 shadow-lg shadow-primary/30">
+                            <span class="material-symbols-outlined text-3xl">emoji_events</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-text-main dark:text-white mb-3">Sports &amp; Cultural
+                            Excellence</h3>
+                        <p class="text-text-muted dark:text-slate-300 text-sm mb-6 leading-relaxed">
+                            Special recognition and scholarships for achievers who have represented their state or
+                            nation in sports or cultural activities.
+                        </p>
+                        <div class="flex items-center gap-2 text-sm font-semibold text-primary dark:text-red-400">
+                            <span>State/National Level</span>
+                            <span class="material-symbols-outlined text-lg">arrow_forward</span>
+                        </div>
+                    </div>
+                </div>
+                <div
+                    class="glass-panel rounded-2xl p-8 relative overflow-hidden group hover:scale-[1.02] transition-all duration-300 shadow-xl shadow-secondary/5 border-t border-white/60 delay-200">
+                    <div class="absolute top-0 right-0 p-6 opacity-10 group-hover:opacity-20 transition-opacity">
+                        <span class="material-symbols-outlined text-8xl text-amber-500">diversity_3</span>
+                    </div>
+                    <div class="relative z-10">
+                        <div
+                            class="size-14 rounded-xl bg-gradient-to-br from-amber-500 to-orange-600 flex items-center justify-center text-white mb-6 shadow-lg shadow-amber-500/30">
+                            <span class="material-symbols-outlined text-3xl">diversity_3</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-text-main dark:text-white mb-3">Special Categories</h3>
+                        <p class="text-text-muted dark:text-slate-300 text-sm mb-6 leading-relaxed">
+                            Dedicated financial aid for girl students (Beti Padhao), wards of defense personnel, and EWS
+                            candidates.
+                        </p>
+                        <div class="flex items-center gap-2 text-sm font-semibold text-amber-600 dark:text-amber-400">
+                            <span>Fee Concessions</span>
+                            <span class="material-symbols-outlined text-lg">arrow_forward</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center mt-8">
+                <a class="inline-flex items-center gap-2 bg-secondary hover:bg-secondary/90 text-white px-8 py-3.5 rounded-full font-bold shadow-lg shadow-secondary/30 hover:shadow-xl transition-all transform hover:-translate-y-1"
+                    href="#apply">
+                    <span class="material-symbols-outlined">assignment_turned_in</span>
+                    Check Your Eligibility
+                </a>
+                <p class="text-xs text-text-muted mt-4">Terms and conditions apply. Scholarship seats are limited.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-20 bg-white dark:bg-slate-900" id="admissions">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl lg:text-4xl font-display font-bold text-text-main dark:text-white mb-4">Admission
+                    Process</h2>
+                <p class="text-text-muted dark:text-slate-400">Your journey to IGEF starts here. Simple 4 step process.
+                </p>
+            </div>
+            <div class="relative">
+                <div
+                    class="hidden lg:block absolute top-1/2 left-0 w-full h-1 bg-background-light dark:bg-slate-800 -translate-y-1/2 z-0 border-t border-border-color">
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 relative z-10">
+                    <div
+                        class="bg-background-light dark:bg-surface-dark p-6 rounded-xl border border-border-color dark:border-slate-700 text-center group hover:-translate-y-2 transition-transform duration-300">
+                        <div
+                            class="size-12 rounded-full bg-primary text-white flex items-center justify-center text-xl font-bold mx-auto mb-4 ring-4 ring-white dark:ring-surface-dark">
+                            1</div>
+                        <h3 class="text-lg font-bold text-text-main dark:text-white mb-2">Check Eligibility</h3>
+                        <p class="text-sm text-text-muted">Ensure you meet the academic criteria for your desired B.Tech
+                            stream.</p>
+                    </div>
+                    <div
+                        class="bg-background-light dark:bg-surface-dark p-6 rounded-xl border border-border-color dark:border-slate-700 text-center group hover:-translate-y-2 transition-transform duration-300">
+                        <div
+                            class="size-12 rounded-full bg-primary text-white flex items-center justify-center text-xl font-bold mx-auto mb-4 ring-4 ring-white dark:ring-surface-dark">
+                            2</div>
+                        <h3 class="text-lg font-bold text-text-main dark:text-white mb-2">Fill Application</h3>
+                        <p class="text-sm text-text-muted">Complete the online application form with accurate details.
+                        </p>
+                    </div>
+                    <div
+                        class="bg-background-light dark:bg-surface-dark p-6 rounded-xl border border-border-color dark:border-slate-700 text-center group hover:-translate-y-2 transition-transform duration-300">
+                        <div
+                            class="size-12 rounded-full bg-primary text-white flex items-center justify-center text-xl font-bold mx-auto mb-4 ring-4 ring-white dark:ring-surface-dark">
+                            3</div>
+                        <h3 class="text-lg font-bold text-text-main dark:text-white mb-2">Counseling</h3>
+                        <p class="text-sm text-text-muted">Attend the counseling session for seat allocation and
+                            verification.</p>
+                    </div>
+                    <div
+                        class="bg-background-light dark:bg-surface-dark p-6 rounded-xl border border-border-color dark:border-slate-700 text-center group hover:-translate-y-2 transition-transform duration-300">
+                        <div
+                            class="size-12 rounded-full bg-secondary text-white flex items-center justify-center text-xl font-bold mx-auto mb-4 ring-4 ring-white dark:ring-surface-dark">
+                            4</div>
+                        <h3 class="text-lg font-bold text-text-main dark:text-white mb-2">Confirmation</h3>
+                        <p class="text-sm text-text-muted">Pay the admission fee and confirm your seat at IGEF.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-12 text-center">
+                <a class="inline-flex items-center gap-2 bg-primary hover:bg-primary/90 text-white px-8 py-3 rounded-full font-bold shadow-lg transition-all"
+                    href="#apply">
+                    Start Your Application <span class="material-symbols-outlined">arrow_forward</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-background-dark text-slate-300 pt-16 pb-8 border-t border-secondary/20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+                <div>
+                    <div class="flex items-center gap-2 mb-6">
+                        <div class="size-8 rounded bg-primary flex items-center justify-center text-white">
+                            <span class="material-symbols-outlined text-lg">school</span>
+                        </div>
+                        <span class="font-display font-bold text-xl text-white">IGEF</span>
+                    </div>
+                    <p class="text-sm leading-relaxed mb-6 text-slate-400">
+                        Indo Global Group of Colleges is a premier engineering institution committed to excellence in
+                        technical education and research.
+                    </p>
+                    <div class="flex gap-4">
+                        <a class="text-white hover:text-secondary transition-colors" href="#"><span
+                                class="material-symbols-outlined">public</span></a>
+                        <a class="text-white hover:text-secondary transition-colors" href="#"><span
+                                class="material-symbols-outlined">alternate_email</span></a>
+                        <a class="text-white hover:text-secondary transition-colors" href="#"><span
+                                class="material-symbols-outlined">group</span></a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="text-secondary font-bold mb-6">Quick Links</h4>
+                    <ul class="space-y-3 text-sm">
+                        <li><a class="hover:text-secondary transition-colors" href="#">About Us</a></li>
+                        <li><a class="hover:text-secondary transition-colors" href="#">Admissions 2024</a></li>
+                        <li><a class="hover:text-secondary transition-colors" href="#">Placement Reports</a></li>
+                        <li><a class="hover:text-secondary transition-colors" href="#">Campus Life</a></li>
+                        <li><a class="hover:text-secondary transition-colors" href="#">Alumni Network</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-secondary font-bold mb-6">Programs</h4>
+                    <ul class="space-y-3 text-sm">
+                        <li><a class="hover:text-secondary transition-colors" href="#">B.Tech Computer Science</a></li>
+                        <li><a class="hover:text-secondary transition-colors" href="#">B.Tech Civil Engineering</a></li>
+                        <li><a class="hover:text-secondary transition-colors" href="#">B.Tech Mechanical</a></li>
+                        <li><a class="hover:text-secondary transition-colors" href="#">B.Tech Electronics</a></li>
+                        <li><a class="hover:text-secondary transition-colors" href="#">M.Tech Programs</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-secondary font-bold mb-6">Contact Us</h4>
+                    <ul class="space-y-4 text-sm">
+                        <li class="flex items-start gap-3">
+                            <span class="material-symbols-outlined text-secondary shrink-0">location_on</span>
+                            <span>Indo Global Education City, Abhipur, New Chandigarh - 140109</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <span class="material-symbols-outlined text-secondary shrink-0">call</span>
+                            <span>+91 98765 43210</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <span class="material-symbols-outlined text-secondary shrink-0">mail</span>
+                            <span>admissions@igef.com</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+                <p class="text-xs text-slate-500">© 2024 Indo Global Group of Colleges. All rights reserved.</p>
+                <div class="flex gap-6 text-xs text-slate-500">
+                    <a class="hover:text-white transition-colors" href="#">Privacy Policy</a>
+                    <a class="hover:text-white transition-colors" href="#">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>

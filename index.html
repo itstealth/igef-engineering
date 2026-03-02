@@ -1,0 +1,1084 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Indo Global – About</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@300;400;500&display=swap"
+    rel="stylesheet">
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            playfair: ['Playfair Display', 'serif'],
+            sans: ['DM Sans', 'sans-serif'],
+          },
+          colors: {
+            crimson: { DEFAULT: '#8B1A1A', light: '#B22222' },
+            gold: '#C9A84C',
+            cream: '#FAF8F4',
+            ink: '#1A1208',
+            body: '#2D2416',
+            muted: '#6B5C45',
+            border: '#E8DFD0',
+          }
+        }
+      }
+    }
+  </script>
+
+
+</head>
+
+<body class="bg-cream text-body font-sans">
+
+  <section class="min-h-screen flex items-center py-20 px-6 overflow-hidden relative">
+
+    <!-- Subtle radial glow bg -->
+    <div class="absolute inset-0 pointer-events-none" style="background: radial-gradient(circle at 78% 18%, rgba(139,26,26,0.04) 0%, transparent 50%),
+                        radial-gradient(circle at 12% 80%, rgba(201,168,76,0.05) 0%, transparent 42%);">
+    </div>
+
+    <div class="max-w-6xl mx-auto w-full grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-20 items-center relative z-10">
+
+      <!-- ────────────────────────────
+         LEFT — Single Image
+    ──────────────────────────── -->
+      <div class="js-img relative img-corner">
+        <div class="rounded-xl overflow-hidden shadow-2xl">
+          <img src="https://i.ibb.co/ZphHnMYP/about-igef.png" alt="Indo Global Education Campus"
+            class="w-full object-cover block transition-transform duration-700 ease-out hover:scale-[1.03]"
+            style="height: 520px;" />
+        </div>
+
+        <!-- Floating years badge -->
+        <div class="js-badge absolute -bottom-5 -right-5 bg-crimson text-white rounded-xl px-5 py-4 shadow-2xl">
+          <p class="font-playfair text-3xl font-black leading-none">20+</p>
+          <p class="text-[0.65rem] mt-1 tracking-[0.18em] uppercase text-red-200">Years of Excellence</p>
+        </div>
+      </div>
+
+      <!-- ────────────────────────────
+         RIGHT — Content
+    ──────────────────────────── -->
+      <div class="flex flex-col">
+
+        <!-- Tag -->
+        <span
+          class="js-tag self-start bg-crimson text-white text-[0.65rem] font-medium tracking-[0.18em] uppercase px-3 py-1.5 rounded-sm mb-5">
+          About Indo Global
+        </span>
+
+        <!-- Title -->
+        <h2 class="js-title font-playfair text-4xl lg:text-5xl font-black leading-[1.1] text-ink mb-5">
+          Punjab's Leading<br />
+          <span class="text-crimson">Education</span> Group
+        </h2>
+
+        <!-- Animated divider -->
+        <div class="js-div h-[3px] w-12 rounded-full mb-6"
+          style="background: linear-gradient(90deg, #8B1A1A, #C9A84C);"></div>
+
+        <!-- Description -->
+        <p class="js-desc text-muted text-base leading-[1.9] mb-8">
+          Indo Global Colleges is Punjab's leading Education Group, located in a lush green, 30+ acre campus in the
+          foothills of Shivalik Ranges, barely 5 km from Chandigarh. With 4 institutions, 10,000+ alumni, 3,000+
+          students and 250+ distinguished faculty, it is a self-financed institute founded in 2003 with a vision to
+          deliver world-class quality education.
+        </p>
+
+        <!-- Stats 2×2 Grid -->
+        <div class="grid grid-cols-2 gap-4 mb-8">
+
+          <!-- Card 1 – Alumni -->
+          <div id="sc1"
+            class="js-card stat-card bg-white border border-border rounded-xl p-5 flex items-start gap-4 cursor-default">
+            <div class="w-11 h-11 rounded-lg bg-red-50 flex items-center justify-center shrink-0">
+              <svg class="w-5 h-5 stroke-crimson fill-none" stroke-width="1.7" viewBox="0 0 24 24">
+                <path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2" />
+                <circle cx="9" cy="7" r="4" />
+                <path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75" />
+              </svg>
+            </div>
+            <div>
+              <p class="font-playfair text-2xl font-bold text-crimson leading-none">10k+</p>
+              <p class="text-xs text-muted mt-1">Alumni Network</p>
+              <p class="text-sm font-medium text-body mt-1.5">Strong Alumni Community</p>
+            </div>
+          </div>
+
+          <!-- Card 2 – Institutions -->
+          <div id="sc2"
+            class="js-card stat-card bg-white border border-border rounded-xl p-5 flex items-start gap-4 cursor-default">
+            <div class="w-11 h-11 rounded-lg bg-red-50 flex items-center justify-center shrink-0">
+              <svg class="w-5 h-5 stroke-crimson fill-none" stroke-width="1.7" viewBox="0 0 24 24">
+                <path d="M22 10v6M2 10l10-5 10 5-10 5z" />
+                <path d="M6 12v5c3 3 9 3 12 0v-5" />
+              </svg>
+            </div>
+            <div>
+              <p class="font-playfair text-2xl font-bold text-crimson leading-none">4</p>
+              <p class="text-xs text-muted mt-1">Institutions</p>
+              <p class="text-sm font-medium text-body mt-1.5">Diverse Academic Streams</p>
+            </div>
+          </div>
+
+          <!-- Card 3 – Campus -->
+          <div id="sc3"
+            class="js-card stat-card bg-white border border-border rounded-xl p-5 flex items-start gap-4 cursor-default">
+            <div class="w-11 h-11 rounded-lg bg-red-50 flex items-center justify-center shrink-0">
+              <svg class="w-5 h-5 stroke-crimson fill-none" stroke-width="1.7" viewBox="0 0 24 24">
+                <path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z" />
+                <polyline points="9 22 9 12 15 12 15 22" />
+              </svg>
+            </div>
+            <div>
+              <p class="font-playfair text-2xl font-bold text-crimson leading-none">30+</p>
+              <p class="text-xs text-muted mt-1">Acre Campus</p>
+              <p class="text-sm font-medium text-body mt-1.5">Lush Green Environment</p>
+            </div>
+          </div>
+
+          <!-- Card 4 – Faculty -->
+          <div id="sc4"
+            class="js-card stat-card bg-white border border-border rounded-xl p-5 flex items-start gap-4 cursor-default">
+            <div class="w-11 h-11 rounded-lg bg-red-50 flex items-center justify-center shrink-0">
+              <svg class="w-5 h-5 stroke-crimson fill-none" stroke-width="1.7" viewBox="0 0 24 24">
+                <path
+                  d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+              </svg>
+            </div>
+            <div>
+              <p class="font-playfair text-2xl font-bold text-crimson leading-none">250+</p>
+              <p class="text-xs text-muted mt-1">Expert Faculty</p>
+              <p class="text-sm font-medium text-body mt-1.5">Accomplished Backgrounds</p>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- CTA Row -->
+        <div class="js-cta flex items-center gap-5">
+          <a href="#"
+            class="inline-flex items-center gap-2 bg-crimson hover:bg-crimson-light text-white text-sm font-medium tracking-wide px-6 py-3 rounded-sm transition-all duration-300 hover:translate-x-1 group">
+            Explore More
+            <svg
+              class="w-4 h-4 stroke-white fill-none stroke-2 transition-transform duration-300 group-hover:translate-x-1"
+              viewBox="0 0 24 24">
+              <line x1="5" y1="12" x2="19" y2="12" />
+              <polyline points="12 5 19 12 12 19" />
+            </svg>
+          </a>
+          <a href="#"
+            class="text-sm text-crimson font-medium hover:underline underline-offset-4 transition-all duration-200">
+            Learn About Us →
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <style>
+    /* Initial hidden states for GSAP */
+    .js-img {
+      opacity: 0;
+      transform: translateX(-30px);
+    }
+
+    .js-badge {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+
+    .js-tag {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+
+    .js-title {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+
+    .js-div {
+      opacity: 0;
+      transform: scaleX(0);
+      transform-origin: left;
+    }
+
+    .js-desc {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+
+    .js-card {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+
+    .js-cta {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+
+    /* Hover lift for cards */
+    .stat-card {
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .stat-card:hover {
+      transform: translateY(-4px) !important;
+      box-shadow: 0 14px 30px rgba(139, 26, 26, 0.12);
+    }
+
+    /* Corner decorators on image wrapper */
+    .img-corner::before {
+      content: '';
+      position: absolute;
+      top: -10px;
+      left: -10px;
+      width: 34px;
+      height: 34px;
+      border-top: 3px solid #8B1A1A;
+      border-left: 3px solid #8B1A1A;
+      border-radius: 1px;
+      pointer-events: none;
+    }
+
+    .img-corner::after {
+      content: '';
+      position: absolute;
+      bottom: -10px;
+      right: -10px;
+      width: 34px;
+      height: 34px;
+      border-bottom: 3px solid #C9A84C;
+      border-right: 3px solid #C9A84C;
+      border-radius: 1px;
+      pointer-events: none;
+    }
+  </style>
+
+  <script>
+    gsap.registerPlugin(ScrollTrigger);
+
+    const tl = gsap.timeline({
+      scrollTrigger: {
+        trigger: 'section',
+        start: 'top 72%',
+        once: true
+      }
+    });
+
+    tl
+      // Image slides in from left
+      .to('.js-img', { opacity: 1, x: 0, duration: 0.8, ease: 'power3.out' }, 0)
+      // Badge pops up
+      .to('.js-badge', { opacity: 1, y: 0, duration: 0.5, ease: 'back.out(1.7)' }, 0.55)
+      // Content staggered
+      .to('.js-tag', { opacity: 1, y: 0, duration: 0.45, ease: 'power2.out' }, 0.2)
+      .to('.js-title', { opacity: 1, y: 0, duration: 0.55, ease: 'power3.out' }, 0.35)
+      .to('.js-div', { opacity: 1, scaleX: 1, duration: 0.5, ease: 'power2.out' }, 0.52)
+      .to('.js-desc', { opacity: 1, y: 0, duration: 0.5, ease: 'power2.out' }, 0.62)
+      // Cards cascade
+      .to('#sc1', { opacity: 1, y: 0, duration: 0.42, ease: 'power2.out' }, 0.72)
+      .to('#sc2', { opacity: 1, y: 0, duration: 0.42, ease: 'power2.out' }, 0.84)
+      .to('#sc3', { opacity: 1, y: 0, duration: 0.42, ease: 'power2.out' }, 0.96)
+      .to('#sc4', { opacity: 1, y: 0, duration: 0.42, ease: 'power2.out' }, 1.08)
+      // CTA
+      .to('.js-cta', { opacity: 1, y: 0, duration: 0.4, ease: 'power2.out' }, 1.2);
+  </script>
+
+  <!-- Programs -->
+
+  <section class="min-h-screen py-20 px-4 relative overflow-hidden">
+
+    <!-- Subtle background decoration -->
+    <div class="absolute top-0 right-0 w-96 h-96 rounded-full pointer-events-none"
+      style="background: radial-gradient(circle, rgba(122,21,21,0.04) 0%, transparent 70%); transform: translate(30%, -30%);">
+    </div>
+    <div class="absolute bottom-0 left-0 w-80 h-80 rounded-full pointer-events-none"
+      style="background: radial-gradient(circle, rgba(201,151,58,0.05) 0%, transparent 70%); transform: translate(-30%, 30%);">
+    </div>
+
+    <div class="max-w-6xl mx-auto">
+
+      <!-- ── Header ── -->
+      <div class="js-hero text-center mb-14">
+        <span
+          class="inline-block bg-red-50 text-[var(--crimson)] text-[0.65rem] font-semibold tracking-[0.18em] uppercase px-4 py-1.5 rounded-full mb-5 border border-red-100">
+          Academic Offerings
+        </span>
+        <h2 class="font-playfair text-4xl lg:text-5xl font-black text-gray-900 mb-4">
+          <span class="heading-line">Our Engineering Programs</span>
+        </h2>
+        <p class="text-gray-500 text-base max-w-xl mx-auto mt-6 leading-relaxed">
+          World-class engineering education designed to shape innovators, problem-solvers, and industry leaders of
+          tomorrow.
+        </p>
+      </div>
+
+      <!-- ── Tab Navigation ── -->
+      <div class="js-tabs flex flex-wrap justify-center gap-3 mb-12">
+        <button onclick="switchTab('btech')"
+          class="tab-btn active font-sans text-sm font-semibold px-6 py-2.5 rounded-full border border-red-200 text-gray-700 flex items-center gap-2"
+          data-tab="btech">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path d="M22 10v6M2 10l10-5 10 5-10 5z" />
+            <path d="M6 12v5c3 3 9 3 12 0v-5" />
+          </svg>
+          B.Tech Programs
+        </button>
+        <button onclick="switchTab('mtech')"
+          class="tab-btn font-sans text-sm font-semibold px-6 py-2.5 rounded-full border border-red-200 text-gray-700 flex items-center gap-2"
+          data-tab="mtech">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <circle cx="12" cy="8" r="6" />
+            <path d="M15.477 12.89L17 22l-5-3-5 3 1.523-9.11" />
+          </svg>
+          M.Tech Programs
+        </button>
+        <button onclick="switchTab('poly')"
+          class="tab-btn font-sans text-sm font-semibold px-6 py-2.5 rounded-full border border-red-200 text-gray-700 flex items-center gap-2"
+          data-tab="poly">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <rect x="2" y="7" width="20" height="14" rx="2" />
+            <path d="M16 7V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v2" />
+          </svg>
+          Polytechnic
+        </button>
+      </div>
+
+      <!-- ── B.Tech Tab ── -->
+      <div id="tab-btech" class="tab-pane active grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-5">
+
+        <div class="prog-card bg-white border border-gray-100 rounded-2xl p-6 relative cursor-pointer overflow-hidden">
+          <span class="num-badge">01</span>
+          <div class="flex items-start justify-between mb-4">
+            <div class="w-12 h-12 rounded-xl flex items-center justify-center"
+              style="background: rgba(122,21,21,0.08);">
+              <svg class="w-6 h-6 stroke-[var(--crimson)] fill-none" stroke-width="1.7" viewBox="0 0 24 24">
+                <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" />
+              </svg>
+            </div>
+            <svg class="w-5 h-5 text-gray-300 card-arrow" fill="none" stroke="currentColor" stroke-width="2"
+              viewBox="0 0 24 24">
+              <line x1="7" y1="17" x2="17" y2="7" />
+              <polyline points="7 7 17 7 17 17" />
+            </svg>
+          </div>
+          <span class="cat-pill bg-red-50 text-[var(--crimson)] border border-red-100">B.Tech · 4 Years</span>
+          <h3 class="font-playfair text-xl font-bold text-gray-900 mt-3 mb-2">Mechanical Engineering</h3>
+          <p class="text-gray-500 text-sm leading-relaxed">Design, analysis and manufacturing of mechanical systems.
+            Covers thermodynamics, fluid mechanics, and robotics.</p>
+        </div>
+
+        <div class="prog-card bg-white border border-gray-100 rounded-2xl p-6 relative cursor-pointer overflow-hidden">
+          <span class="num-badge">02</span>
+          <div class="flex items-start justify-between mb-4">
+            <div class="w-12 h-12 rounded-xl flex items-center justify-center"
+              style="background: rgba(122,21,21,0.08);">
+              <svg class="w-6 h-6 stroke-[var(--crimson)] fill-none" stroke-width="1.7" viewBox="0 0 24 24">
+                <polyline points="16 18 22 12 16 6" />
+                <polyline points="8 6 2 12 8 18" />
+              </svg>
+            </div>
+            <svg class="w-5 h-5 text-gray-300 card-arrow" fill="none" stroke="currentColor" stroke-width="2"
+              viewBox="0 0 24 24">
+              <line x1="7" y1="17" x2="17" y2="7" />
+              <polyline points="7 7 17 7 17 17" />
+            </svg>
+          </div>
+          <span class="cat-pill bg-red-50 text-[var(--crimson)] border border-red-100">B.Tech · 4 Years</span>
+          <h3 class="font-playfair text-xl font-bold text-gray-900 mt-3 mb-2">Computer Science Engineering</h3>
+          <p class="text-gray-500 text-sm leading-relaxed">Data structures, algorithms, AI/ML, cloud computing and
+            software development for the digital age.</p>
+        </div>
+
+        <div class="prog-card bg-white border border-gray-100 rounded-2xl p-6 relative cursor-pointer overflow-hidden">
+          <span class="num-badge">03</span>
+          <div class="flex items-start justify-between mb-4">
+            <div class="w-12 h-12 rounded-xl flex items-center justify-center"
+              style="background: rgba(122,21,21,0.08);">
+              <svg class="w-6 h-6 stroke-[var(--crimson)] fill-none" stroke-width="1.7" viewBox="0 0 24 24">
+                <path d="M13 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V9z" />
+                <polyline points="13 2 13 9 20 9" />
+              </svg>
+            </div>
+            <svg class="w-5 h-5 text-gray-300 card-arrow" fill="none" stroke="currentColor" stroke-width="2"
+              viewBox="0 0 24 24">
+              <line x1="7" y1="17" x2="17" y2="7" />
+              <polyline points="7 7 17 7 17 17" />
+            </svg>
+          </div>
+          <span class="cat-pill bg-red-50 text-[var(--crimson)] border border-red-100">B.Tech · 4 Years</span>
+          <h3 class="font-playfair text-xl font-bold text-gray-900 mt-3 mb-2">Electronics & Communication Engineering
+          </h3>
+          <p class="text-gray-500 text-sm leading-relaxed">Signal processing, VLSI, embedded systems, and wireless
+            communication technologies.</p>
+        </div>
+
+        <div class="prog-card bg-white border border-gray-100 rounded-2xl p-6 relative cursor-pointer overflow-hidden">
+          <span class="num-badge">04</span>
+          <div class="flex items-start justify-between mb-4">
+            <div class="w-12 h-12 rounded-xl flex items-center justify-center"
+              style="background: rgba(122,21,21,0.08);">
+              <svg class="w-6 h-6 stroke-[var(--crimson)] fill-none" stroke-width="1.7" viewBox="0 0 24 24">
+                <path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z" />
+                <polyline points="9 22 9 12 15 12 15 22" />
+              </svg>
+            </div>
+            <svg class="w-5 h-5 text-gray-300 card-arrow" fill="none" stroke="currentColor" stroke-width="2"
+              viewBox="0 0 24 24">
+              <line x1="7" y1="17" x2="17" y2="7" />
+              <polyline points="7 7 17 7 17 17" />
+            </svg>
+          </div>
+          <span class="cat-pill bg-red-50 text-[var(--crimson)] border border-red-100">B.Tech · 4 Years</span>
+          <h3 class="font-playfair text-xl font-bold text-gray-900 mt-3 mb-2">Civil Engineering</h3>
+          <p class="text-gray-500 text-sm leading-relaxed">Structural design, construction management, environmental
+            engineering and sustainable infrastructure.</p>
+        </div>
+
+      </div>
+
+      <!-- ── M.Tech Tab ── -->
+      <div id="tab-mtech" class="tab-pane grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-5">
+
+        <div class="prog-card bg-white border border-gray-100 rounded-2xl p-6 relative cursor-pointer overflow-hidden">
+          <span class="num-badge">01</span>
+          <div class="flex items-start justify-between mb-4">
+            <div class="w-12 h-12 rounded-xl flex items-center justify-center"
+              style="background: rgba(122,21,21,0.08);">
+              <svg class="w-6 h-6 stroke-[var(--crimson)] fill-none" stroke-width="1.7" viewBox="0 0 24 24">
+                <path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z" />
+                <polyline points="9 22 9 12 15 12 15 22" />
+              </svg>
+            </div>
+            <svg class="w-5 h-5 text-gray-300 card-arrow" fill="none" stroke="currentColor" stroke-width="2"
+              viewBox="0 0 24 24">
+              <line x1="7" y1="17" x2="17" y2="7" />
+              <polyline points="7 7 17 7 17 17" />
+            </svg>
+          </div>
+          <span class="cat-pill bg-amber-50 text-amber-700 border border-amber-100">M.Tech · 2 Years</span>
+          <h3 class="font-playfair text-xl font-bold text-gray-900 mt-3 mb-2">Civil Engineering</h3>
+          <p class="text-gray-500 text-sm leading-relaxed">Advanced structural analysis, geotechnical engineering, and
+            transportation infrastructure systems.</p>
+        </div>
+
+        <div class="prog-card bg-white border border-gray-100 rounded-2xl p-6 relative cursor-pointer overflow-hidden">
+          <span class="num-badge">02</span>
+          <div class="flex items-start justify-between mb-4">
+            <div class="w-12 h-12 rounded-xl flex items-center justify-center"
+              style="background: rgba(122,21,21,0.08);">
+              <svg class="w-6 h-6 stroke-[var(--crimson)] fill-none" stroke-width="1.7" viewBox="0 0 24 24">
+                <polyline points="16 18 22 12 16 6" />
+                <polyline points="8 6 2 12 8 18" />
+              </svg>
+            </div>
+            <svg class="w-5 h-5 text-gray-300 card-arrow" fill="none" stroke="currentColor" stroke-width="2"
+              viewBox="0 0 24 24">
+              <line x1="7" y1="17" x2="17" y2="7" />
+              <polyline points="7 7 17 7 17 17" />
+            </svg>
+          </div>
+          <span class="cat-pill bg-amber-50 text-amber-700 border border-amber-100">M.Tech · 2 Years</span>
+          <h3 class="font-playfair text-xl font-bold text-gray-900 mt-3 mb-2">Computer Science Engineering</h3>
+          <p class="text-gray-500 text-sm leading-relaxed">Advanced computing, machine learning research, distributed
+            systems and high-performance computing.</p>
+        </div>
+
+        <div class="prog-card bg-white border border-gray-100 rounded-2xl p-6 relative cursor-pointer overflow-hidden">
+          <span class="num-badge">03</span>
+          <div class="flex items-start justify-between mb-4">
+            <div class="w-12 h-12 rounded-xl flex items-center justify-center"
+              style="background: rgba(122,21,21,0.08);">
+              <svg class="w-6 h-6 stroke-[var(--crimson)] fill-none" stroke-width="1.7" viewBox="0 0 24 24">
+                <path d="M13 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V9z" />
+                <polyline points="13 2 13 9 20 9" />
+              </svg>
+            </div>
+            <svg class="w-5 h-5 text-gray-300 card-arrow" fill="none" stroke="currentColor" stroke-width="2"
+              viewBox="0 0 24 24">
+              <line x1="7" y1="17" x2="17" y2="7" />
+              <polyline points="7 7 17 7 17 17" />
+            </svg>
+          </div>
+          <span class="cat-pill bg-amber-50 text-amber-700 border border-amber-100">M.Tech · 2 Years</span>
+          <h3 class="font-playfair text-xl font-bold text-gray-900 mt-3 mb-2">Electronics & Communication</h3>
+          <p class="text-gray-500 text-sm leading-relaxed">Advanced RF systems, photonics, antenna design, and next-gen
+            communication networks.</p>
+        </div>
+
+      </div>
+
+      <!-- ── Polytechnic Tab ── -->
+      <div id="tab-poly" class="tab-pane grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-5">
+
+        <div class="prog-card bg-white border border-gray-100 rounded-2xl p-6 relative cursor-pointer overflow-hidden">
+          <span class="num-badge">01</span>
+          <div class="flex items-start justify-between mb-4">
+            <div class="w-12 h-12 rounded-xl flex items-center justify-center"
+              style="background: rgba(122,21,21,0.08);">
+              <svg class="w-6 h-6 stroke-[var(--crimson)] fill-none" stroke-width="1.7" viewBox="0 0 24 24">
+                <path d="M12 2L2 7l10 5 10-5-10-5z" />
+                <path d="M2 17l10 5 10-5M2 12l10 5 10-5" />
+              </svg>
+            </div>
+            <svg class="w-5 h-5 text-gray-300 card-arrow" fill="none" stroke="currentColor" stroke-width="2"
+              viewBox="0 0 24 24">
+              <line x1="7" y1="17" x2="17" y2="7" />
+              <polyline points="7 7 17 7 17 17" />
+            </svg>
+          </div>
+          <span class="cat-pill bg-emerald-50 text-emerald-700 border border-emerald-100">Diploma · 3 Years</span>
+          <h3 class="font-playfair text-xl font-bold text-gray-900 mt-3 mb-2">Mechanical Engineering</h3>
+          <p class="text-gray-500 text-sm leading-relaxed">Hands-on mechanical skills covering fabrication, machining
+            and industrial manufacturing processes.</p>
+        </div>
+
+        <div class="prog-card bg-white border border-gray-100 rounded-2xl p-6 relative cursor-pointer overflow-hidden">
+          <span class="num-badge">02</span>
+          <div class="flex items-start justify-between mb-4">
+            <div class="w-12 h-12 rounded-xl flex items-center justify-center"
+              style="background: rgba(122,21,21,0.08);">
+              <svg class="w-6 h-6 stroke-[var(--crimson)] fill-none" stroke-width="1.7" viewBox="0 0 24 24">
+                <polyline points="16 18 22 12 16 6" />
+                <polyline points="8 6 2 12 8 18" />
+              </svg>
+            </div>
+            <svg class="w-5 h-5 text-gray-300 card-arrow" fill="none" stroke="currentColor" stroke-width="2"
+              viewBox="0 0 24 24">
+              <line x1="7" y1="17" x2="17" y2="7" />
+              <polyline points="7 7 17 7 17 17" />
+            </svg>
+          </div>
+          <span class="cat-pill bg-emerald-50 text-emerald-700 border border-emerald-100">Diploma · 3 Years</span>
+          <h3 class="font-playfair text-xl font-bold text-gray-900 mt-3 mb-2">Computer Science & IT</h3>
+          <p class="text-gray-500 text-sm leading-relaxed">Practical programming, web development, networking and IT
+            infrastructure management skills.</p>
+        </div>
+
+        <div class="prog-card bg-white border border-gray-100 rounded-2xl p-6 relative cursor-pointer overflow-hidden">
+          <span class="num-badge">03</span>
+          <div class="flex items-start justify-between mb-4">
+            <div class="w-12 h-12 rounded-xl flex items-center justify-center"
+              style="background: rgba(122,21,21,0.08);">
+              <svg class="w-6 h-6 stroke-[var(--crimson)] fill-none" stroke-width="1.7" viewBox="0 0 24 24">
+                <path d="M13 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V9z" />
+                <polyline points="13 2 13 9 20 9" />
+              </svg>
+            </div>
+            <svg class="w-5 h-5 text-gray-300 card-arrow" fill="none" stroke="currentColor" stroke-width="2"
+              viewBox="0 0 24 24">
+              <line x1="7" y1="17" x2="17" y2="7" />
+              <polyline points="7 7 17 7 17 17" />
+            </svg>
+          </div>
+          <span class="cat-pill bg-emerald-50 text-emerald-700 border border-emerald-100">Diploma · 3 Years</span>
+          <h3 class="font-playfair text-xl font-bold text-gray-900 mt-3 mb-2">Electronics & Communication</h3>
+          <p class="text-gray-500 text-sm leading-relaxed">Circuit design, industrial electronics, PCB design and
+            telecommunications fundamentals.</p>
+        </div>
+
+        <div class="prog-card bg-white border border-gray-100 rounded-2xl p-6 relative cursor-pointer overflow-hidden">
+          <span class="num-badge">04</span>
+          <div class="flex items-start justify-between mb-4">
+            <div class="w-12 h-12 rounded-xl flex items-center justify-center"
+              style="background: rgba(122,21,21,0.08);">
+              <svg class="w-6 h-6 stroke-[var(--crimson)] fill-none" stroke-width="1.7" viewBox="0 0 24 24">
+                <path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z" />
+                <polyline points="9 22 9 12 15 12 15 22" />
+              </svg>
+            </div>
+            <svg class="w-5 h-5 text-gray-300 card-arrow" fill="none" stroke="currentColor" stroke-width="2"
+              viewBox="0 0 24 24">
+              <line x1="7" y1="17" x2="17" y2="7" />
+              <polyline points="7 7 17 7 17 17" />
+            </svg>
+          </div>
+          <span class="cat-pill bg-emerald-50 text-emerald-700 border border-emerald-100">Diploma · 3 Years</span>
+          <h3 class="font-playfair text-xl font-bold text-gray-900 mt-3 mb-2">Civil Engineering</h3>
+          <p class="text-gray-500 text-sm leading-relaxed">Construction technology, surveying, CAD drafting and building
+            materials science.</p>
+        </div>
+
+      </div>
+
+      <!-- ── Bottom CTA strip ── -->
+      <div class="js-cta mt-16 rounded-2xl p-8 flex flex-col sm:flex-row items-center justify-between gap-6 opacity-0"
+        style="background: linear-gradient(135deg, var(--crimson) 0%, #5a0e0e 100%);">
+        <div>
+          <p class="font-playfair text-2xl font-bold text-white mb-1">Ready to Begin Your Journey?</p>
+          <p class="text-red-200 text-sm">Join 3,000+ students shaping their future at Indo Global.</p>
+        </div>
+        <div class="flex gap-3 shrink-0">
+          <a href="#"
+            class="bg-white text-[var(--crimson)] font-semibold text-sm px-6 py-3 rounded-xl hover:bg-red-50 transition-all duration-200 hover:translate-y-[-2px] hover:shadow-lg">
+            Apply Now →
+          </a>
+          <a href="#"
+            class="border border-red-300 text-white font-medium text-sm px-5 py-3 rounded-xl hover:bg-white hover:bg-opacity-10 transition-all duration-200">
+            Download Brochure
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <style>
+    :root {
+      --crimson: #7A1515;
+      --crimson-mid: #9B1C1C;
+      --gold: #C9973A;
+      --cream: #FAF8F4;
+    }
+
+    body {
+      font-family: 'DM Sans', sans-serif;
+      background: var(--cream);
+    }
+
+    /* ── Tab nav ── */
+    .tab-btn {
+      transition: all 0.25s ease;
+    }
+
+    .tab-btn.active {
+      background: var(--crimson);
+      color: #fff;
+      box-shadow: 0 4px 16px rgba(122, 21, 21, 0.25);
+    }
+
+    .tab-btn:not(.active):hover {
+      background: rgba(122, 21, 21, 0.06);
+    }
+
+    /* ── Program card ── */
+    .prog-card {
+      opacity: 0;
+      transform: translateY(18px);
+      transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+    }
+
+    .prog-card.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .prog-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 16px 36px rgba(122, 21, 21, 0.1);
+      border-color: var(--crimson-mid) !important;
+    }
+
+    .prog-card:hover .card-arrow {
+      transform: translate(3px, -3px);
+      color: var(--crimson);
+    }
+
+    .card-arrow {
+      transition: transform 0.25s ease, color 0.25s ease;
+    }
+
+    /* Number badge */
+    .num-badge {
+      font-family: 'Playfair Display', serif;
+      font-size: 3rem;
+      font-weight: 900;
+      line-height: 1;
+      color: rgba(122, 21, 21, 0.07);
+      position: absolute;
+      top: 12px;
+      right: 16px;
+      pointer-events: none;
+      user-select: none;
+    }
+
+    /* Category pill */
+    .cat-pill {
+      font-size: 0.6rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      font-weight: 600;
+      padding: 3px 9px;
+      border-radius: 100px;
+    }
+
+    /* Tab content transition */
+    .tab-pane {
+      display: none;
+    }
+
+    .tab-pane.active {
+      display: grid;
+    }
+
+    /* Heading underline */
+    .heading-line {
+      display: inline-block;
+      position: relative;
+    }
+
+    .heading-line::after {
+      content: '';
+      position: absolute;
+      bottom: -10px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 52px;
+      height: 3px;
+      background: linear-gradient(90deg, var(--crimson), var(--gold));
+      border-radius: 2px;
+    }
+
+    /* Initial hidden for GSAP */
+    .js-hero {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+
+    .js-tabs {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+  </style>
+
+  <script>
+    gsap.registerPlugin(ScrollTrigger);
+
+    // Entry animations
+    gsap.to('.js-hero', {
+      opacity: 1, y: 0, duration: 0.8, ease: 'power3.out',
+      scrollTrigger: { trigger: '.js-hero', start: 'top 80%', once: true }
+    });
+    gsap.to('.js-tabs', {
+      opacity: 1, y: 0, duration: 0.6, ease: 'power2.out', delay: 0.2,
+      scrollTrigger: { trigger: '.js-tabs', start: 'top 85%', once: true }
+    });
+    gsap.to('.js-cta', {
+      opacity: 1, duration: 0.7, ease: 'power2.out',
+      scrollTrigger: { trigger: '.js-cta', start: 'top 88%', once: true }
+    });
+
+    // Animate active tab cards on load
+    function animateCards() {
+      const activeCards = document.querySelectorAll('.tab-pane.active .prog-card');
+      activeCards.forEach((card, i) => {
+        card.style.opacity = 0;
+        card.style.transform = 'translateY(18px)';
+        setTimeout(() => {
+          card.style.transition = 'opacity 0.45s ease, transform 0.45s ease, box-shadow 0.3s ease, border-color 0.3s ease';
+          card.style.opacity = 1;
+          card.style.transform = 'translateY(0)';
+        }, i * 100 + 100);
+      });
+    }
+
+    // Tab switching
+    function switchTab(tab) {
+      // Update buttons
+      document.querySelectorAll('.tab-btn').forEach(btn => btn.classList.remove('active'));
+      document.querySelector(`[data-tab="${tab}"]`).classList.add('active');
+
+      // Hide all panes
+      document.querySelectorAll('.tab-pane').forEach(pane => pane.classList.remove('active'));
+
+      // Show selected
+      const pane = document.getElementById(`tab-${tab}`);
+      pane.classList.add('active');
+      animateCards();
+    }
+
+    // Animate on page load
+    setTimeout(animateCards, 400);
+  </script>
+
+  <section class="py-20 bg-background-light dark:bg-background-dark" id="programs">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16">
+        <span class="text-secondary font-bold tracking-wider uppercase text-sm">Academic Excellence</span>
+        <h2 class="text-3xl lg:text-4xl font-display font-bold text-slate-900 dark:text-white mt-2">Programs Offered
+        </h2>
+        <p class="text-slate-600 dark:text-slate-400 mt-4 max-w-2xl mx-auto">Explore our diverse range of engineering
+          programs designed to shape the innovators of tomorrow. From foundational Polytechnic courses to advanced
+          M.Tech specializations.</p>
+      </div>
+      <div class="mb-16">
+        <div class="flex items-center gap-4 mb-8">
+          <h3 class="text-2xl font-bold text-primary dark:text-white border-l-4 border-secondary pl-4">B.Tech Programs
+          </h3>
+          <span class="bg-primary/10 text-primary text-xs font-bold px-3 py-1 rounded-full">4 Years</span>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div
+            class="bg-white dark:bg-surface-dark rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 group flex flex-col h-full border border-slate-100 dark:border-slate-800">
+            <div class="relative h-48 overflow-hidden">
+              <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent z-10"></div>
+              <img alt="Students working on laptops coding in a computer lab"
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                data-alt="Students coding in a modern computer lab"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuArTdUDHUx1ZWqC2E1Z87oE-dbku4AmpzlMfl4LhYLVJyrperJc-qIcphBAt4Qq0oisGMj7IJttFaa9ggPIf7AEH9sS0kJl66LpXyhRgNada5xwdLl8XPJo5v4I5JNkq6_t3AlYMpo9cKX296IxFvMoRx2a_HMPI84T7tRYYhQoVKRGfX2idBTCeEITvhMKyAIZuEKgq0Zrb33Nfgu0lu-39kZeyHzGB-rld2dvE9HH1MpsDkcfCildk3IlX0ZMP2TZwRnz-6ktr5Z3" />
+            </div>
+            <div class="p-5 flex flex-col flex-grow">
+              <h3 class="text-lg font-bold text-slate-900 dark:text-white mb-2">Computer Science</h3>
+              <ul class="text-sm text-slate-600 dark:text-slate-400 space-y-2 mb-4 list-disc pl-4">
+                <li>AI &amp; Machine Learning</li>
+                <li>Cloud Computing</li>
+                <li>Data Science</li>
+              </ul>
+              <div class="mt-auto pt-4 border-t border-slate-100 dark:border-slate-800 flex flex-col gap-2">
+                <button
+                  class="w-full py-2 border border-primary text-primary hover:bg-primary hover:text-white rounded-lg text-sm font-semibold transition-colors">Know
+                  More</button>
+                <button
+                  class="w-full py-2 border border-slate-200 dark:border-slate-700 text-slate-600 dark:text-slate-400 hover:bg-slate-50 dark:hover:bg-slate-800 rounded-lg text-xs font-medium transition-colors flex items-center justify-center gap-2">
+                  <span class="material-symbols-outlined text-sm">download</span> Download Fee Structure
+                </button>
+              </div>
+            </div>
+          </div>
+          <div
+            class="bg-white dark:bg-surface-dark rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 group flex flex-col h-full border border-slate-100 dark:border-slate-800">
+            <div class="relative h-48 overflow-hidden">
+              <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent z-10"></div>
+              <img alt="Mechanical engineering gears and machinery blueprint"
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                data-alt="Mechanical engineering workshop machinery"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuD3fd2rTAusnn5Z9t-fuj9yvfokgywJPbbW6a_udfBv6s6csahH_HUt8g2PMFuwTMMhZ7iVXI8FA_D3wuZLgUreLFyqd6-dWWTCHgCbDnj9KCw22KpfprNbKMumnmUqNFvGABselzJpvkkeAlJF4IRGfraWzrysdHWKWzogt2psM4MTMSpGUvGHm8Rx3tr9Ocuriss4LKUgplc8YS62RAm6sgV-6RKzMS7tNuc49c9_eJlULWIy6BgSKAWozqY8g6K-YtanG2zBY7JU" />
+            </div>
+            <div class="p-5 flex flex-col flex-grow">
+              <h3 class="text-lg font-bold text-slate-900 dark:text-white mb-2">Mechanical Engg.</h3>
+              <ul class="text-sm text-slate-600 dark:text-slate-400 space-y-2 mb-4 list-disc pl-4">
+                <li>Robotics &amp; Automation</li>
+                <li>Thermodynamics</li>
+                <li>CAD/CAM Design</li>
+              </ul>
+              <div class="mt-auto pt-4 border-t border-slate-100 dark:border-slate-800 flex flex-col gap-2">
+                <button
+                  class="w-full py-2 border border-primary text-primary hover:bg-primary hover:text-white rounded-lg text-sm font-semibold transition-colors">Know
+                  More</button>
+                <button
+                  class="w-full py-2 border border-slate-200 dark:border-slate-700 text-slate-600 dark:text-slate-400 hover:bg-slate-50 dark:hover:bg-slate-800 rounded-lg text-xs font-medium transition-colors flex items-center justify-center gap-2">
+                  <span class="material-symbols-outlined text-sm">download</span> Download Fee Structure
+                </button>
+              </div>
+            </div>
+          </div>
+          <div
+            class="bg-white dark:bg-surface-dark rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 group flex flex-col h-full border border-slate-100 dark:border-slate-800">
+            <div class="relative h-48 overflow-hidden">
+              <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent z-10"></div>
+              <img alt="Electronic circuit board close up"
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                data-alt="Electronics and communication circuit board"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuBcqbdgmZrMwnYdYTAzCHfEQ2r-_4tEf-g2d-8Rbu7KTCKl6f0BWocg00cXd7oKiJ0jJbrFnABfGe3yRs5DQ6weRWyCv6AcS4Wnu5Vn6wje2I5hNRaZLz7Mp_k5PBEllMlqsAxECJ5-d-X1DgsexLQqT3GHQqQ0prvU0XhWSOLSp2GEYtJ8UmfitiejCnWBXRGDEqD8JFYhaXNrLGH_PUgK4Se8Wd9S7WsHOEIAn2DTN8lC0VNqwIioRi6_tTPfCciD5D9yHgdlDXSD" />
+            </div>
+            <div class="p-5 flex flex-col flex-grow">
+              <h3 class="text-lg font-bold text-slate-900 dark:text-white mb-2">Electronics &amp; Comm.</h3>
+              <ul class="text-sm text-slate-600 dark:text-slate-400 space-y-2 mb-4 list-disc pl-4">
+                <li>VLSI Design</li>
+                <li>Embedded Systems</li>
+                <li>IoT &amp; Telecom</li>
+              </ul>
+              <div class="mt-auto pt-4 border-t border-slate-100 dark:border-slate-800 flex flex-col gap-2">
+                <button
+                  class="w-full py-2 border border-primary text-primary hover:bg-primary hover:text-white rounded-lg text-sm font-semibold transition-colors">Know
+                  More</button>
+                <button
+                  class="w-full py-2 border border-slate-200 dark:border-slate-700 text-slate-600 dark:text-slate-400 hover:bg-slate-50 dark:hover:bg-slate-800 rounded-lg text-xs font-medium transition-colors flex items-center justify-center gap-2">
+                  <span class="material-symbols-outlined text-sm">download</span> Download Fee Structure
+                </button>
+              </div>
+            </div>
+          </div>
+          <div
+            class="bg-white dark:bg-surface-dark rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 group flex flex-col h-full border border-slate-100 dark:border-slate-800">
+            <div class="relative h-48 overflow-hidden">
+              <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent z-10"></div>
+              <img alt="Civil engineering construction site survey"
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                data-alt="Civil engineering construction site"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuD8LIbhrgQweOUX2g-wpebIet5pD8nL70fEUmLRGCxoWuwkhUb6l1lHvB8xJUw6YGN3QVOn3dzoglNJkOJypMOaElUnM30Sl3A5paNniWmEk9GEldxmHTK3CcfENK_w4xImyG0y3wkt5jZStGFslaBHsCIK0pIcFZ6x0JXg3poFtadjLJlyVrj_YuV08kOUVtmskEsbR8IRjy00xK68kOdDY7Fb5d7IoGtG8YC_oJkzRP3Z4ijvyThAMtJCU-1a4yXsr_3FWDgSr5zK" />
+            </div>
+            <div class="p-5 flex flex-col flex-grow">
+              <h3 class="text-lg font-bold text-slate-900 dark:text-white mb-2">Civil Engineering</h3>
+              <ul class="text-sm text-slate-600 dark:text-slate-400 space-y-2 mb-4 list-disc pl-4">
+                <li>Structural Engineering</li>
+                <li>Smart Cities</li>
+                <li>Surveying &amp; Geotech</li>
+              </ul>
+              <div class="mt-auto pt-4 border-t border-slate-100 dark:border-slate-800 flex flex-col gap-2">
+                <button
+                  class="w-full py-2 border border-primary text-primary hover:bg-primary hover:text-white rounded-lg text-sm font-semibold transition-colors">Know
+                  More</button>
+                <button
+                  class="w-full py-2 border border-slate-200 dark:border-slate-700 text-slate-600 dark:text-slate-400 hover:bg-slate-50 dark:hover:bg-slate-800 rounded-lg text-xs font-medium transition-colors flex items-center justify-center gap-2">
+                  <span class="material-symbols-outlined text-sm">download</span> Download Fee Structure
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="mb-16">
+        <div class="flex items-center gap-4 mb-8">
+          <h3 class="text-2xl font-bold text-primary dark:text-white border-l-4 border-secondary pl-4">M.Tech Programs
+          </h3>
+          <span class="bg-secondary/10 text-secondary text-xs font-bold px-3 py-1 rounded-full">2 Years</span>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div
+            class="bg-white dark:bg-surface-dark rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 group flex flex-col h-full border border-slate-100 dark:border-slate-800">
+            <div class="relative h-48 overflow-hidden">
+              <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent z-10"></div>
+              <img alt="Advanced bridge construction planning"
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuD8LIbhrgQweOUX2g-wpebIet5pD8nL70fEUmLRGCxoWuwkhUb6l1lHvB8xJUw6YGN3QVOn3dzoglNJkOJypMOaElUnM30Sl3A5paNniWmEk9GEldxmHTK3CcfENK_w4xImyG0y3wkt5jZStGFslaBHsCIK0pIcFZ6x0JXg3poFtadjLJlyVrj_YuV08kOUVtmskEsbR8IRjy00xK68kOdDY7Fb5d7IoGtG8YC_oJkzRP3Z4ijvyThAMtJCU-1a4yXsr_3FWDgSr5zK" />
+            </div>
+            <div class="p-5 flex flex-col flex-grow">
+              <h3 class="text-lg font-bold text-slate-900 dark:text-white mb-2">Civil Engineering</h3>
+              <ul class="text-sm text-slate-600 dark:text-slate-400 space-y-2 mb-4 list-disc pl-4">
+                <li>Advanced Structural Design</li>
+                <li>Transportation Engineering</li>
+              </ul>
+              <div class="mt-auto pt-4 border-t border-slate-100 dark:border-slate-800 flex flex-col gap-2">
+                <button
+                  class="w-full py-2 border border-secondary text-secondary hover:bg-secondary hover:text-white rounded-lg text-sm font-semibold transition-colors">Know
+                  More</button>
+                <button
+                  class="w-full py-2 border border-slate-200 dark:border-slate-700 text-slate-600 dark:text-slate-400 hover:bg-slate-50 dark:hover:bg-slate-800 rounded-lg text-xs font-medium transition-colors flex items-center justify-center gap-2">
+                  <span class="material-symbols-outlined text-sm">download</span> Download Fee Structure
+                </button>
+              </div>
+            </div>
+          </div>
+          <div
+            class="bg-white dark:bg-surface-dark rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 group flex flex-col h-full border border-slate-100 dark:border-slate-800">
+            <div class="relative h-48 overflow-hidden">
+              <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent z-10"></div>
+              <img alt="Data server center visualization"
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuArTdUDHUx1ZWqC2E1Z87oE-dbku4AmpzlMfl4LhYLVJyrperJc-qIcphBAt4Qq0oisGMj7IJttFaa9ggPIf7AEH9sS0kJl66LpXyhRgNada5xwdLl8XPJo5v4I5JNkq6_t3AlYMpo9cKX296IxFvMoRx2a_HMPI84T7tRYYhQoVKRGfX2idBTCeEITvhMKyAIZuEKgq0Zrb33Nfgu0lu-39kZeyHzGB-rld2dvE9HH1MpsDkcfCildk3IlX0ZMP2TZwRnz-6ktr5Z3" />
+            </div>
+            <div class="p-5 flex flex-col flex-grow">
+              <h3 class="text-lg font-bold text-slate-900 dark:text-white mb-2">Computer Science</h3>
+              <ul class="text-sm text-slate-600 dark:text-slate-400 space-y-2 mb-4 list-disc pl-4">
+                <li>Advanced Algorithms</li>
+                <li>Cyber Security Research</li>
+              </ul>
+              <div class="mt-auto pt-4 border-t border-slate-100 dark:border-slate-800 flex flex-col gap-2">
+                <button
+                  class="w-full py-2 border border-secondary text-secondary hover:bg-secondary hover:text-white rounded-lg text-sm font-semibold transition-colors">Know
+                  More</button>
+                <button
+                  class="w-full py-2 border border-slate-200 dark:border-slate-700 text-slate-600 dark:text-slate-400 hover:bg-slate-50 dark:hover:bg-slate-800 rounded-lg text-xs font-medium transition-colors flex items-center justify-center gap-2">
+                  <span class="material-symbols-outlined text-sm">download</span> Download Fee Structure
+                </button>
+              </div>
+            </div>
+          </div>
+          <div
+            class="bg-white dark:bg-surface-dark rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 group flex flex-col h-full border border-slate-100 dark:border-slate-800">
+            <div class="relative h-48 overflow-hidden">
+              <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent z-10"></div>
+              <img alt="Advanced microprocessor chip design"
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuBcqbdgmZrMwnYdYTAzCHfEQ2r-_4tEf-g2d-8Rbu7KTCKl6f0BWocg00cXd7oKiJ0jJbrFnABfGe3yRs5DQ6weRWyCv6AcS4Wnu5Vn6wje2I5hNRaZLz7Mp_k5PBEllMlqsAxECJ5-d-X1DgsexLQqT3GHQqQ0prvU0XhWSOLSp2GEYtJ8UmfitiejCnWBXRGDEqD8JFYhaXNrLGH_PUgK4Se8Wd9S7WsHOEIAn2DTN8lC0VNqwIioRi6_tTPfCciD5D9yHgdlDXSD" />
+            </div>
+            <div class="p-5 flex flex-col flex-grow">
+              <h3 class="text-lg font-bold text-slate-900 dark:text-white mb-2">Electronics &amp; Comm.</h3>
+              <ul class="text-sm text-slate-600 dark:text-slate-400 space-y-2 mb-4 list-disc pl-4">
+                <li>Wireless Communication</li>
+                <li>Signal Processing</li>
+              </ul>
+              <div class="mt-auto pt-4 border-t border-slate-100 dark:border-slate-800 flex flex-col gap-2">
+                <button
+                  class="w-full py-2 border border-secondary text-secondary hover:bg-secondary hover:text-white rounded-lg text-sm font-semibold transition-colors">Know
+                  More</button>
+                <button
+                  class="w-full py-2 border border-slate-200 dark:border-slate-700 text-slate-600 dark:text-slate-400 hover:bg-slate-50 dark:hover:bg-slate-800 rounded-lg text-xs font-medium transition-colors flex items-center justify-center gap-2">
+                  <span class="material-symbols-outlined text-sm">download</span> Download Fee Structure
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="flex items-center gap-4 mb-8">
+          <h3 class="text-2xl font-bold text-primary dark:text-white border-l-4 border-secondary pl-4">Polytechnic
+            Programs</h3>
+          <span
+            class="bg-slate-200 dark:bg-slate-700 text-slate-700 dark:text-slate-300 text-xs font-bold px-3 py-1 rounded-full">3
+            Years</span>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl">
+          <div
+            class="bg-white dark:bg-surface-dark rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 group flex flex-col h-full border border-slate-100 dark:border-slate-800">
+            <div class="relative h-48 overflow-hidden">
+              <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent z-10"></div>
+              <img alt="Lathe machine workshop"
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuD3fd2rTAusnn5Z9t-fuj9yvfokgywJPbbW6a_udfBv6s6csahH_HUt8g2PMFuwTMMhZ7iVXI8FA_D3wuZLgUreLFyqd6-dWWTCHgCbDnj9KCw22KpfprNbKMumnmUqNFvGABselzJpvkkeAlJF4IRGfraWzrysdHWKWzogt2psM4MTMSpGUvGHm8Rx3tr9Ocuriss4LKUgplc8YS62RAm6sgV-6RKzMS7tNuc49c9_eJlULWIy6BgSKAWozqY8g6K-YtanG2zBY7JU" />
+            </div>
+            <div class="p-5 flex flex-col flex-grow">
+              <h3 class="text-lg font-bold text-slate-900 dark:text-white mb-2">Mechanical Engineering</h3>
+              <ul class="text-sm text-slate-600 dark:text-slate-400 space-y-2 mb-4 list-disc pl-4">
+                <li>Manufacturing Processes</li>
+                <li>Automobile Engineering</li>
+              </ul>
+              <div class="mt-auto pt-4 border-t border-slate-100 dark:border-slate-800 flex flex-col gap-2">
+                <button
+                  class="w-full py-2 border border-slate-500 text-slate-700 dark:text-slate-300 hover:bg-slate-700 hover:text-white dark:hover:bg-slate-600 rounded-lg text-sm font-semibold transition-colors">Know
+                  More</button>
+                <button
+                  class="w-full py-2 border border-slate-200 dark:border-slate-700 text-slate-600 dark:text-slate-400 hover:bg-slate-50 dark:hover:bg-slate-800 rounded-lg text-xs font-medium transition-colors flex items-center justify-center gap-2">
+                  <span class="material-symbols-outlined text-sm">download</span> Download Fee Structure
+                </button>
+              </div>
+            </div>
+          </div>
+          <div
+            class="bg-white dark:bg-surface-dark rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 group flex flex-col h-full border border-slate-100 dark:border-slate-800">
+            <div class="relative h-48 overflow-hidden">
+              <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent z-10"></div>
+              <img alt="Road survey equipment"
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuD8LIbhrgQweOUX2g-wpebIet5pD8nL70fEUmLRGCxoWuwkhUb6l1lHvB8xJUw6YGN3QVOn3dzoglNJkOJypMOaElUnM30Sl3A5paNniWmEk9GEldxmHTK3CcfENK_w4xImyG0y3wkt5jZStGFslaBHsCIK0pIcFZ6x0JXg3poFtadjLJlyVrj_YuV08kOUVtmskEsbR8IRjy00xK68kOdDY7Fb5d7IoGtG8YC_oJkzRP3Z4ijvyThAMtJCU-1a4yXsr_3FWDgSr5zK" />
+            </div>
+            <div class="p-5 flex flex-col flex-grow">
+              <h3 class="text-lg font-bold text-slate-900 dark:text-white mb-2">Civil Engineering</h3>
+              <ul class="text-sm text-slate-600 dark:text-slate-400 space-y-2 mb-4 list-disc pl-4">
+                <li>Construction Materials</li>
+                <li>Public Health Engineering</li>
+              </ul>
+              <div class="mt-auto pt-4 border-t border-slate-100 dark:border-slate-800 flex flex-col gap-2">
+                <button
+                  class="w-full py-2 border border-slate-500 text-slate-700 dark:text-slate-300 hover:bg-slate-700 hover:text-white dark:hover:bg-slate-600 rounded-lg text-sm font-semibold transition-colors">Know
+                  More</button>
+                <button
+                  class="w-full py-2 border border-slate-200 dark:border-slate-700 text-slate-600 dark:text-slate-400 hover:bg-slate-50 dark:hover:bg-slate-800 rounded-lg text-xs font-medium transition-colors flex items-center justify-center gap-2">
+                  <span class="material-symbols-outlined text-sm">download</span> Download Fee Structure
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</body>
+
+</html>
