@@ -1632,6 +1632,675 @@
         setInterval(() => goToSlide((current + 1) % total), 4000);
     </script>
 
+    <section class="rnk-section">
+        <div class="rnk-corner-tl"></div>
+        <div class="rnk-corner-br"></div>
+
+        <!-- Floating particles -->
+        <div class="rnk-particle"
+            style="width:6px;height:6px;background:rgba(201,151,58,0.4);bottom:20%;left:15%;animation-delay:0s;animation-duration:7s;">
+        </div>
+        <div class="rnk-particle"
+            style="width:4px;height:4px;background:rgba(122,21,21,0.3);bottom:30%;left:25%;animation-delay:2s;animation-duration:9s;">
+        </div>
+        <div class="rnk-particle"
+            style="width:5px;height:5px;background:rgba(201,151,58,0.5);bottom:15%;right:20%;animation-delay:4s;animation-duration:8s;">
+        </div>
+        <div class="rnk-particle"
+            style="width:3px;height:3px;background:rgba(122,21,21,0.25);bottom:25%;right:30%;animation-delay:1s;animation-duration:6s;">
+        </div>
+        <div class="rnk-particle"
+            style="width:6px;height:6px;background:rgba(201,151,58,0.3);bottom:10%;left:50%;animation-delay:3s;animation-duration:10s;">
+        </div>
+
+        <!-- Header -->
+        <span class="rnk-eyebrow" id="rnk-eyebrow">National Recognition</span>
+
+        <h2 class="rnk-main-title" id="rnk-mtitle">
+            <span class="rnk-hl">Rank</span>ings
+        </h2>
+
+        <div class="rnk-gold-divider" id="rnk-gdiv">
+            <span class="rnk-dl"></span>
+            <span class="rnk-dot"></span>
+            <span class="rnk-dr"></span>
+        </div>
+
+        <p class="rnk-title-sub" id="rnk-msub">
+            Recognized among the top institutions in India for academic excellence and career placements.
+        </p>
+
+        <!-- Cards -->
+        <div class="rnk-cards-row">
+
+            <!-- Card 1 – No.1 -->
+            <div class="rnk-card" id="rnk-rc1">
+                <div class="rnk-trophy-box">
+                    <svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M48 6H16v22c0 8.84 7.16 16 16 16s16-7.16 16-16V6z" />
+                        <path
+                            d="M16 10H6a2 2 0 00-2 2v4a10 10 0 0010 10h2V10zM48 10h10a2 2 0 012 2v4a10 10 0 01-10 10h-2V10z" />
+                        <rect x="28" y="44" width="8" height="10" rx="1" />
+                        <path d="M20 54h24a2 2 0 010 4H20a2 2 0 010-4z" />
+                        <path d="M25 28l7-4 7 4-2-8 6-5-8-1-3-7-3 7-8 1 6 5-2 8z" fill="rgba(255,255,255,0.3)" />
+                    </svg>
+                </div>
+                <span class="rnk-badge-pill">1st Place</span>
+                <p class="rnk-number">Ranked <span class="rnk-num">No.1</span></p>
+                <div class="rnk-card-rule"></div>
+                <p class="rnk-desc">In Placements<br />(Maximum Placements<br />Per College)</p>
+            </div>
+
+            <!-- Card 2 – No.3 -->
+            <div class="rnk-card" id="rnk-rc2">
+                <div class="rnk-trophy-box" style="background: linear-gradient(135deg, #d4a843, #a07428, #7a5a1a);">
+                    <svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M48 6H16v22c0 8.84 7.16 16 16 16s16-7.16 16-16V6z" />
+                        <path
+                            d="M16 10H6a2 2 0 00-2 2v4a10 10 0 0010 10h2V10zM48 10h10a2 2 0 012 2v4a10 10 0 01-10 10h-2V10z" />
+                        <rect x="28" y="44" width="8" height="10" rx="1" />
+                        <path d="M20 54h24a2 2 0 010 4H20a2 2 0 010-4z" />
+                        <path d="M25 28l7-4 7 4-2-8 6-5-8-1-3-7-3 7-8 1 6 5-2 8z" fill="rgba(255,255,255,0.3)" />
+                    </svg>
+                </div>
+                <span class="rnk-badge-pill">3rd Place</span>
+                <p class="rnk-number">Ranked <span class="rnk-num">No.3</span></p>
+                <div class="rnk-card-rule"></div>
+                <p class="rnk-desc">Among Group of Colleges<br />by PTU – 2011</p>
+            </div>
+
+        </div>
+
+        <!-- Bottom -->
+        <div class="rnk-bottom-row" id="rnk-brow">
+            <div class="rnk-b-line"></div>
+            <p class="rnk-b-text">Indo Global Education Foundation · Est. 2003</p>
+            <div class="rnk-b-line"></div>
+        </div>
+
+    </section>
+
+    <style>
+        /* ── Scoped CSS variables (rankings section only) ── */
+        .rnk-section {
+            --rnk-gold: #C9973A;
+            --rnk-gold-light: #e8c46a;
+            --rnk-crimson: #7A1515;
+            --rnk-cream: #FAF6EE;
+        }
+
+        /* ── Section wrapper ── */
+        .rnk-section {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 7rem 1.5rem;
+            position: relative;
+            overflow: hidden;
+            font-family: 'DM Sans', sans-serif;
+            background: #FAF6EE;
+            box-sizing: border-box;
+        }
+
+        /* Cream radial glows */
+        .rnk-section::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background:
+                radial-gradient(ellipse at 20% 40%, rgba(201, 151, 58, 0.10) 0%, transparent 55%),
+                radial-gradient(ellipse at 80% 60%, rgba(122, 21, 21, 0.06) 0%, transparent 55%);
+            pointer-events: none;
+        }
+
+        /* Gold corner accents */
+        .rnk-corner-tl {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 160px;
+            height: 160px;
+            border-top: 2px solid rgba(201, 151, 58, 0.3);
+            border-left: 2px solid rgba(201, 151, 58, 0.3);
+            pointer-events: none;
+        }
+
+        .rnk-corner-br {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            width: 160px;
+            height: 160px;
+            border-bottom: 2px solid rgba(201, 151, 58, 0.3);
+            border-right: 2px solid rgba(201, 151, 58, 0.3);
+            pointer-events: none;
+        }
+
+        /* ── Eyebrow label ── */
+        .rnk-eyebrow {
+            font-size: 0.62rem;
+            font-weight: 600;
+            letter-spacing: 0.22em;
+            text-transform: uppercase;
+            color: #C9973A;
+            background: rgba(201, 151, 58, 0.08);
+            border: 1px solid rgba(201, 151, 58, 0.25);
+            padding: 0.35rem 1rem;
+            border-radius: 100px;
+            margin-bottom: 1.4rem;
+            opacity: 0;
+            transform: translateY(16px);
+        }
+
+        /* ── Main heading ── */
+        .rnk-main-title {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(2.8rem, 6vw, 4.5rem);
+            font-weight: 900;
+            color: #1a1208;
+            text-align: center;
+            line-height: 1;
+            margin-bottom: 0.9rem;
+            opacity: 0;
+            transform: translateY(20px);
+        }
+
+        .rnk-main-title .rnk-hl {
+            color: #7A1515;
+            font-style: italic;
+        }
+
+        /* ── Gold divider ── */
+        .rnk-gold-divider {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            margin-bottom: 1.2rem;
+            opacity: 0;
+        }
+
+        .rnk-gold-divider span {
+            display: block;
+            height: 2px;
+            width: 48px;
+            border-radius: 2px;
+        }
+
+        .rnk-gold-divider .rnk-dl {
+            background: linear-gradient(90deg, transparent, #C9973A);
+        }
+
+        .rnk-gold-divider .rnk-dr {
+            background: linear-gradient(90deg, #C9973A, transparent);
+        }
+
+        .rnk-gold-divider .rnk-dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: #C9973A;
+            flex-shrink: 0;
+        }
+
+        /* ── Subtitle ── */
+        .rnk-title-sub {
+            font-size: 0.88rem;
+            color: #8a7055;
+            text-align: center;
+            max-width: 420px;
+            line-height: 1.75;
+            margin-bottom: 4.5rem;
+            opacity: 0;
+            transform: translateY(16px);
+        }
+
+        /* ══════════════════════
+       RANK CARDS
+    ══════════════════════ */
+        .rnk-cards-row {
+            display: flex;
+            gap: 4rem;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            z-index: 2;
+        }
+
+        .rnk-card {
+            position: relative;
+            width: 320px;
+            height: 320px;
+            border-radius: 10px;
+            background: #fff;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 2.5rem;
+            box-shadow:
+                0 0 0 2px #C9973A,
+                0 0 0 12px rgba(201, 151, 58, 0.08),
+                0 0 0 13px rgba(201, 151, 58, 0.12),
+                0 16px 48px rgba(201, 151, 58, 0.18),
+                0 4px 16px rgba(0, 0, 0, 0.08);
+            opacity: 0;
+            transform: scale(0.88) translateY(30px);
+            transition: transform 0.4s ease, box-shadow 0.4s ease;
+            cursor: default;
+            box-sizing: border-box;
+        }
+
+        .rnk-card:hover {
+            transform: translateY(-10px) scale(1.04) !important;
+            box-shadow:
+                0 0 0 2px #C9973A,
+                0 0 0 12px rgba(201, 151, 58, 0.12),
+                0 0 0 13px rgba(201, 151, 58, 0.18),
+                0 28px 64px rgba(201, 151, 58, 0.28),
+                0 8px 24px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Outer decorative dashed ring */
+        .rnk-card::before {
+            content: '';
+            position: absolute;
+            inset: -22px;
+            border-radius: 50%;
+            border: 1.5px dashed rgba(201, 151, 58, 0.2);
+            pointer-events: none;
+            animation: rnk-spinRing 20s linear infinite;
+        }
+
+        @keyframes rnk-spinRing {
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        /* Trophy icon wrapper */
+        .rnk-trophy-box {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #e8c46a, #C9973A, #a07428);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1rem;
+            box-shadow: 0 8px 28px rgba(201, 151, 58, 0.55);
+            flex-shrink: 0;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .rnk-card:hover .rnk-trophy-box {
+            transform: scale(1.12) rotate(-5deg);
+            box-shadow: 0 14px 36px rgba(201, 151, 58, 0.7);
+        }
+
+        .rnk-trophy-box svg {
+            width: 44px;
+            height: 44px;
+            fill: #fff;
+            flex-shrink: 0;
+        }
+
+        /* Rank badge pill */
+        .rnk-badge-pill {
+            font-size: 0.58rem;
+            font-weight: 700;
+            letter-spacing: 0.18em;
+            text-transform: uppercase;
+            color: #C9973A;
+            background: rgba(201, 151, 58, 0.1);
+            border: 1px solid rgba(201, 151, 58, 0.3);
+            padding: 0.2rem 0.65rem;
+            border-radius: 100px;
+            margin-bottom: 0.55rem;
+        }
+
+        /* Ranked No.X */
+        .rnk-number {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.75rem;
+            font-weight: 900;
+            color: #1a1208;
+            line-height: 1.1;
+            margin-bottom: 0.6rem;
+        }
+
+        .rnk-number .rnk-num {
+            color: #7A1515;
+            font-style: italic;
+            font-size: 2.1rem;
+        }
+
+        /* Thin gold rule */
+        .rnk-card-rule {
+            width: 32px;
+            height: 2px;
+            background: linear-gradient(90deg, #C9973A, transparent);
+            border-radius: 2px;
+            margin: 0 auto 0.65rem;
+        }
+
+        .rnk-desc {
+            font-size: 0.78rem;
+            color: #8a7055;
+            line-height: 1.65;
+            font-weight: 400;
+        }
+
+        /* ── Bottom row ── */
+        .rnk-bottom-row {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-top: 4.5rem;
+            opacity: 0;
+        }
+
+        .rnk-b-line {
+            width: 60px;
+            height: 1px;
+            background: rgba(201, 151, 58, 0.35);
+        }
+
+        .rnk-b-text {
+            font-size: 0.6rem;
+            font-weight: 600;
+            letter-spacing: 0.18em;
+            text-transform: uppercase;
+            color: rgba(26, 18, 8, 0.25);
+            white-space: nowrap;
+        }
+
+        /* Floating particles */
+        .rnk-particle {
+            position: absolute;
+            border-radius: 50%;
+            pointer-events: none;
+            opacity: 0;
+            animation: rnk-floatUp 8s ease-in-out infinite;
+        }
+
+        @keyframes rnk-floatUp {
+            0% {
+                opacity: 0;
+                transform: translateY(0) scale(1);
+            }
+
+            20% {
+                opacity: 0.6;
+            }
+
+            80% {
+                opacity: 0.3;
+            }
+
+            100% {
+                opacity: 0;
+                transform: translateY(-120px) scale(0.5);
+            }
+        }
+    </style>
+
+    <script>
+        gsap.registerPlugin(ScrollTrigger);
+        const rnkSt = { trigger: '.rnk-section', start: 'top 72%', once: true };
+
+        gsap.to('#rnk-eyebrow', { opacity: 1, y: 0, duration: 0.6, ease: 'power2.out', scrollTrigger: rnkSt });
+        gsap.to('#rnk-mtitle', { opacity: 1, y: 0, duration: 0.75, ease: 'power3.out', delay: 0.15, scrollTrigger: rnkSt });
+        gsap.to('#rnk-gdiv', { opacity: 1, duration: 0.5, delay: 0.3, scrollTrigger: rnkSt });
+        gsap.to('#rnk-msub', { opacity: 1, y: 0, duration: 0.55, ease: 'power2.out', delay: 0.4, scrollTrigger: rnkSt });
+
+        gsap.to('#rnk-rc1', {
+            opacity: 1, y: 0, scale: 1,
+            duration: 0.8, ease: 'back.out(1.6)', delay: 0.55,
+            scrollTrigger: rnkSt
+        });
+        gsap.to('#rnk-rc2', {
+            opacity: 1, y: 0, scale: 1,
+            duration: 0.8, ease: 'back.out(1.6)', delay: 0.72,
+            scrollTrigger: rnkSt
+        });
+
+        gsap.to('#rnk-brow', { opacity: 1, duration: 0.6, delay: 1.0, scrollTrigger: rnkSt });
+
+        // Trophy pulse on entry
+        ScrollTrigger.create({
+            trigger: '.rnk-section', start: 'top 72%', once: true,
+            onEnter: () => {
+                setTimeout(() => {
+                    gsap.to('.rnk-trophy-box', {
+                        scale: 1.18,
+                        boxShadow: '0 10px 32px rgba(201,151,58,0.7)',
+                        duration: 0.45,
+                        ease: 'power2.out',
+                        stagger: 0.15,
+                        yoyo: true,
+                        repeat: 1
+                    });
+                }, 900);
+            }
+        });
+    </script>
+
+    <section class="aff-section">
+
+        <!-- Title -->
+        <h2 class="aff-section-title" id="stitle">Affiliated With</h2>
+
+        <!-- 3 Cards -->
+        <div class="aff-cards-track" id="track">
+
+            <!-- Card 1 – PTU -->
+            <div class="aff-card" id="ac1">
+                <div class="aff-logo-area">
+                    <img src="https://igef.net/info/engineering/images_webp/logo1-(3).webp"
+                        alt="Punjab Technical University" />
+                </div>
+                <p class="aff-card-desc">I.K. Gujral Punjab Technical University, Kapurthala</p>
+            </div>
+
+            <!-- Card 2 – AICTE -->
+            <div class="aff-card" id="ac2">
+                <div class="aff-logo-area">
+                    <img src="https://igef.net/info/engineering/images_webp/logo4.webp" alt="AICTE" />
+                </div>
+                <p class="aff-card-desc">All India Council for Technical Education, New Delhi</p>
+            </div>
+
+            <!-- Card 3 – Council of Architecture -->
+            <div class="aff-card" id="ac3">
+                <div class="aff-logo-area">
+                    <img src="https://igef.net/info/engineering/images_webp/logo3%20(1).webp"
+                        alt="Council of Architecture" />
+                </div>
+                <p class="aff-card-desc">Council of Architecture, New Delhi</p>
+            </div>
+
+        </div>
+
+        <!-- Nav arrows -->
+
+    </section>
+
+    <style>
+        /* ── Section ── */
+        .aff-section {
+            padding: 4rem 2rem;
+            background: #fff;
+            overflow: hidden;
+            text-align: center;
+            font-family: 'DM Sans', sans-serif;
+            box-sizing: border-box;
+        }
+
+        /* ── Title ── */
+        .aff-section-title {
+            font-size: 1.75rem;
+            font-weight: 700;
+            color: #1a1a1a;
+            margin-bottom: 2rem;
+            opacity: 0;
+            transform: translateY(16px);
+        }
+
+        /* ── Scrollable row ── */
+        .aff-cards-track {
+            display: flex;
+            gap: 1.5rem;
+            padding-bottom: 1rem;
+            padding-right: 2rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        /* ── Individual card ── */
+        .aff-card {
+            position: relative;
+            flex-shrink: 0;
+            width: 240px;
+            background: #fff;
+            border: 1.5px solid #e5e7eb;
+            border-radius: 16px;
+            padding: 2rem 1.25rem 1.5rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            opacity: 0;
+            transform: translateY(24px);
+            transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+            cursor: default;
+            overflow: hidden;
+            box-sizing: border-box;
+        }
+
+        .aff-card:hover {
+            transform: translateY(-6px) !important;
+            box-shadow: 0 16px 40px rgba(0, 0, 0, 0.10);
+            border-color: rgba(122, 21, 21, 0.25);
+        }
+
+        /* ── Ribbon badge (top-center) ── */
+        .aff-ribbon {
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            background: #8B1A1A;
+            color: #fff;
+            font-size: 0.6rem;
+            font-weight: 700;
+            letter-spacing: 0.06em;
+            text-transform: uppercase;
+            padding: 0.3rem 1rem 0.5rem;
+            white-space: nowrap;
+            clip-path: polygon(0 0, 100% 0, 100% 75%, 50% 100%, 0 75%);
+            min-width: 90px;
+            text-align: center;
+            z-index: 2;
+        }
+
+        /* ── Logo area ── */
+        .aff-logo-area {
+            width: 150px;
+            height: 150px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1.5rem;
+            flex-shrink: 0;
+        }
+
+        .aff-logo-area img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            display: block;
+            transition: transform 0.3s ease;
+        }
+
+        .aff-card:hover .aff-logo-area img {
+            transform: scale(1.06);
+        }
+
+        /* ── Description ── */
+        .aff-card-desc {
+            font-size: 0.82rem;
+            color: #4b5563;
+            line-height: 1.6;
+            font-weight: 400;
+            margin-top: auto;
+        }
+
+        /* ── No-ribbon spacer ── */
+        .aff-ribbon-spacer {
+            height: 2px;
+        }
+
+        /* Nav arrows */
+        .aff-nav-row {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            margin-top: 2rem;
+            padding-right: 2rem;
+            justify-content: flex-end;
+            opacity: 0;
+        }
+
+        .aff-nav-btn {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            border: 1.5px solid #e5e7eb;
+            background: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            color: #6b7280;
+        }
+
+        .aff-nav-btn:hover {
+            border-color: #8B1A1A;
+            color: #8B1A1A;
+            background: #fff5f5;
+        }
+
+        .aff-nav-btn svg {
+            width: 18px;
+            height: 18px;
+            stroke: currentColor;
+            fill: none;
+            stroke-width: 2;
+        }
+    </style>
+
+    <script>
+        gsap.registerPlugin(ScrollTrigger);
+        const affSt = { trigger: '.aff-section', start: 'top 80%', once: true };
+
+        gsap.to('#stitle', { opacity: 1, y: 0, duration: 0.7, ease: 'power2.out', scrollTrigger: affSt });
+
+        ['ac1', 'ac2', 'ac3'].forEach((id, i) => {
+            gsap.to(`#${id}`, {
+                opacity: 1, y: 0,
+                duration: 0.55,
+                ease: 'back.out(1.3)',
+                delay: i * 0.13 + 0.25,
+                scrollTrigger: affSt
+            });
+        });
+    </script>
+
     <section class="py-20 bg-background-light dark:bg-background-dark" id="placements">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-16">
